@@ -32,7 +32,7 @@ namespace RadniNalog.Controllers
        // [Authorize(Roles ="Admin")]
         public IActionResult Administracija()
         {
-            ViewBag.AppName = "myApp";
+            ViewBag.AppName = "appAdmin";
             ViewData["Message"] = "Your contact page.";
 
             return View();

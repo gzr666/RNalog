@@ -25,6 +25,14 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
 
     });
 
+    $stateProvider.state("statistika", {
+
+        url: "/statistika",
+        templateUrl: "../templates/statistika.html",
+        controller: "chartController2"
+
+    });
+
 
 
 
