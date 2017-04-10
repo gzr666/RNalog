@@ -2,7 +2,7 @@
 (function () {
 
     angular.module("appAdmin")
-    .controller("chartController", function ($scope) {
+    .controller("chartController2", function ($scope) {
 
 
         $scope.options = {

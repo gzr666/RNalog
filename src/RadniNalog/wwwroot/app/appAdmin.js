@@ -1,7 +1,7 @@
 ﻿/// <reference path="../lib/angular/angular.js" />
 
 
-var myApp = angular.module("appAdmin", ["ui.router", "toastr"]);
+var myApp = angular.module("appAdmin", ["ui.router", "toastr", 'ngTable', 'chart.js']);
 
 myApp.config(function ($stateProvider, $urlRouterProvider) {
 
