@@ -29,7 +29,7 @@ namespace RadniNalog.Controllers
             return View();
         }
 
-       // [Authorize(Roles ="Admin")]
+        [Authorize(Roles ="Admin,SuperAdmin")]
         public IActionResult Administracija()
         {
             ViewBag.AppName = "appAdmin";

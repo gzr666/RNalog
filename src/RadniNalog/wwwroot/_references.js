@@ -6,6 +6,7 @@
 /// <reference path="controllers/chartcontroller2.js" />
 /// <reference path="controllers/createcontroller.js" />
 /// <reference path="controllers/HomeController.js" />
+/// <reference path="controllers/radnicicontroller.js" />
 /// <reference path="js/site.js" />
 /// <reference path="lib/angular/angular.js" />
 /// <reference path="lib/bootstrap/dist/js/bootstrap.js" />

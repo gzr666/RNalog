@@ -33,6 +33,14 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
 
     });
 
+    $stateProvider.state("radnici", {
+
+        url: "/radnici",
+        templateUrl: "../templates/zaposlenici.html",
+        controller: "radniciController"
+
+    });
+
 
 
 
