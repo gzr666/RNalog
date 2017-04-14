@@ -2,34 +2,31 @@
 (function () {
 
     angular.module("appAdmin")
-    .controller("CreateController", function ($scope, $rootScope, $http, zaposlenikService, toastr, $state, $stateParams) {
+    .controller("CreateVrstaRadaController", function ($scope, $rootScope, $http, vrstaRadaService, toastr, $state, $stateParams) {
         
 
 
       
-        zaposlenikService.dohvatiZaposlenika($stateParams.id).then(function (data) {
+        //vrstaRadaService.dohvatiVrstaRada($stateParams.id).then(function (data) {
 
-            $scope.zaposlenik = data;
+        //    $scope.zaposlenik = data;
 
-        }, function (error) {
+        //}, function (error) {
 
 
 
-        });
+        //});
 
 
 
         $scope.test2 = "create";
         $scope.zaposlenik = {};
 
-        $scope.saveZaposlenik = function (zaposlenik) {
-            var postZaposlenik = {
-                "Ime": zaposlenik.ime
-
-            }
+        $scope.saveVrstaRada = function (vrstaRada) {
+            
 
            
-            zaposlenikService.postZaposlenik(postZaposlenik).then(function (data) {
+            vrstaRadaService.postVrstaRada(vrstaRada).then(function (data) {
 
                 toastr.success('Uspjesno kreiran zaposlenik', '',
                     {
@@ -46,7 +43,7 @@
 
         };
 
-        $scope.editZaposlenik = function (zaposlenik) {
+        $scope.editVrstaRada = function (zaposlenik) {
 
             var postZaposlenik = {
 
@@ -58,7 +55,7 @@
 
 
 
-            zaposlenikService.editZaposlenik(zaposlenik).then(function (data) {
+            vrstaRadaService.editVrstaRada(zaposlenik).then(function (data) {
 
                 toastr.success('Uspjesno izmijenjen zaposlenik', '',
                     {

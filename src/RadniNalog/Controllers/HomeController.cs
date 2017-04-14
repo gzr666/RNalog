@@ -10,9 +10,18 @@ namespace RadniNalog.Controllers
 {
     public class HomeController : Controller
     {
-        
 
-        
+
+
+        public IActionResult home()
+        {
+
+
+           
+            return View();
+        }
+
+
 
         public  IActionResult Index()
         {

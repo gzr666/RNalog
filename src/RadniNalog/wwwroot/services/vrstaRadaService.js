@@ -1,13 +1,13 @@
 ﻿(function () {
 
-    angular.module("appAdmin").factory("zaposlenikService", function ($http, $q) {
+    angular.module("appAdmin").factory("vrstaRadaService", function ($http, $q) {
 
 
-        var saveZaposlenik = function (zaposlenik) {
+        var saveVrstaRada = function (zaposlenik) {
 
             var q = $q.defer();
 
-            $http.post("/api/zaposlenici", zaposlenik).then(
+            $http.post("/api/VrstaRada", zaposlenik).then(
                function (data) {
 
 
@@ -24,13 +24,13 @@
 
         };
 
-        var deleteZaposlenik = function (id)
+        var deleteVrstaRada = function (id)
         {
             var q = $q.defer();
 
             $http({
                 method: 'DELETE',
-                url: '/api/zaposlenici/' + id
+                url: '/api/VrstaRada/' + id
             }).then(function successCallback(response) {
                 // this callback will be called asynchronously
                 // when the response is available
@@ -50,12 +50,12 @@
 
         }
 
-        var updateZaposlenik = function (zaposlenik)
+        var updateVrstaRada = function (zaposlenik)
         {
             var q = $q.defer();
             $http({
                 method: 'PUT',
-                url: '/api/zaposlenici/' + zaposlenik.id,
+                url: '/api/VrstaRada/' + zaposlenik.id,
                 data:zaposlenik
             }).then(function successCallback(response) {
                 // this callback will be called asynchronously
@@ -78,10 +78,10 @@
 
         }
 
-        var getZaposlenik = function (id)
+        var getVrstaRada = function (id)
         {
             var q = $q.defer();
-            var url = "/api/zaposlenici/" + id;
+            var url = "/api/VrstaRada/" + id;
             $http.get(url).then(
                 function (data) {
 
@@ -208,10 +208,10 @@
 
         return {
 
-            postZaposlenik: saveZaposlenik,
-            deleteZaposlenik: deleteZaposlenik,
-            editZaposlenik: updateZaposlenik,
-            dohvatiZaposlenika:getZaposlenik
+            postVrstaRada: saveVrstaRada,
+            deleteVrstaRada: deleteVrstaRada,
+            editVrstaRada: updateVrstaRada,
+            dohvatiVrstaRada:getVrstaRada
 
         }
 

@@ -48,6 +48,9 @@ namespace RadniNalog.Controllers
         {
             ViewData["ReturnUrl"] = returnUrl;
             return View();
+
+           
+
         }
 
         //

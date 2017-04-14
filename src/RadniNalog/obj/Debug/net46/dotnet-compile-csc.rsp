@@ -214,6 +214,7 @@
 "E:\Projects\RadniNalog\src\RadniNalog\Controllers\HomeController.cs"
 "E:\Projects\RadniNalog\src\RadniNalog\Controllers\ManageController.cs"
 "E:\Projects\RadniNalog\src\RadniNalog\Controllers\StatisticsController.cs"
+"E:\Projects\RadniNalog\src\RadniNalog\Controllers\VrstaRadaController.cs"
 "E:\Projects\RadniNalog\src\RadniNalog\Controllers\ZaposlenikController.cs"
 "E:\Projects\RadniNalog\src\RadniNalog\Data\ApplicationDbContext.cs"
 "E:\Projects\RadniNalog\src\RadniNalog\Data\Migrations\00000000000000_CreateIdentitySchema.cs"

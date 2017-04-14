@@ -1,5 +1,5 @@
 ﻿<div id="radniNalog2">
-<a ui-sref="createZaposlenik" class="btn btn-danger btn-block btn-lg">Dodaj Zaposlenika</a>
+<a ui-sref="createVrstaRada" class="btn btn-danger btn-block btn-lg">Dodaj Vrstu Rada</a>
 <div class="panel panel-primary" id="radniNalog">
     <div class="panel-heading text-center"><h3>Panel Heading</h3></div>
     <div class="panel-body">
@@ -10,8 +10,8 @@
                 <td data-title="'ID'" sortable="'id'" filter="{ 'id': 'text' }">
                     {{user.id}}
                 </td>
-                <td data-title="'IME'" sortable="'ime'" filter="{ 'ime': 'text' }">
-                    {{user.ime | limitTo: 18 }}
+                <td data-title="'NAZIV'" sortable="'naziv'" filter="{ 'naziv': 'text' }">
+                    {{user.naziv | limitTo: 18 }}
                 
                    
                    

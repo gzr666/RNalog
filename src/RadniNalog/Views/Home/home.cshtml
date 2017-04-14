@@ -1,4 +1,13 @@
 ﻿
+@using Microsoft.AspNetCore.Identity
+@using RadniNalog.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+   Layout = null;
+}
 
 
 
@@ -30,6 +39,9 @@
 
                        
 
+                        @if (User.IsInRole("SuperAdmin") || User.IsInRole("Admin") )
+                        {
+
                         <td>
 
                             <button class="btn btn-danger btn-sm">Izbrisi</button>
@@ -42,6 +54,7 @@
                             <button class="btn btn-primary btn-sm">Uredi</button>
 
                         </td>
+                        }
                     </tr>
                 </table>
 
