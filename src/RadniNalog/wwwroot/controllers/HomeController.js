@@ -7,6 +7,29 @@
        
         $scope.users = [];
 
+        $scope.rukovoditelji = [];
+        $scope.izvrsitelji1 = [];
+        $scope.izvrsitelji2 = [];
+
+        $scope.pNalozi = [{ id: 1, name: "DA" }, { id: 2, name: "NE" }];
+
+
+        $http.get("/api/zaposlenici").success(function (data) {
+
+
+            
+            angular.copy(data, $scope.rukovoditelji);
+            angular.copy(data, $scope.izvrsitelji1);
+            angular.copy(data, $scope.izvrsitelji2);
+        });
+
+
+        $scope.clickMe2 = function (item)
+        {
+
+            
+        }
+
         $http.get("app/data.json").then((function (data2) {
 
             console.log(data2);
