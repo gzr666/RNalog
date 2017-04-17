@@ -1,7 +1,7 @@
 ﻿(function () {
 
     angular.module("appAdmin")
-    .controller("vrstaRadaController", function ($scope, $rootScope, $http, $filter, ngTableParams, vrstaRadaService, toastr, $state) {
+    .controller("automobilController", function ($scope, $rootScope, $http, $filter, ngTableParams, automobilService, toastr, $state) {
         
        
 
@@ -9,7 +9,7 @@
        
         $scope.users = [];
 
-        $http.get("/api/VrstaRada").then((function (data2) {
+        $http.get("/api/Automobil").then((function (data2) {
 
             console.log(data2);
 
@@ -41,11 +41,11 @@
         });
 
 
-        $scope.removeVrstaRada = function (user) {
+        $scope.removeAutomobil = function (user) {
 
-            vrstaRadaService.deleteVrstaRada(user.id).then(function (data) {
+            automobilService.deleteAutomobil(user.id).then(function (data) {
 
-                toastr.success('Uspjesno izbrisana Vrsta Rada', '',{
+                toastr.success('Uspjesno izbrisan Automobil', '',{
                     onHidden: function () { $state.go("admin"); }
                 });
               

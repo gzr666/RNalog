@@ -2,14 +2,14 @@
 (function () {
 
     angular.module("appAdmin")
-    .controller("CreateVrstaRadaController", function ($scope, $rootScope, $http, vrstaRadaService, toastr, $state, $stateParams) {
+    .controller("CreateAutomobilController", function ($scope, $rootScope, $http, automobilService, toastr, $state, $stateParams) {
         
 
 
       
-        vrstaRadaService.dohvatiVrstaRada($stateParams.id).then(function (data) {
+        automobilService.dohvatiAutomobil($stateParams.id).then(function (data) {
 
-            $scope.vrstaRada = data;
+            $scope.automobil = data;
 
         }, function (error) {
 
@@ -19,16 +19,15 @@
 
 
 
-        $scope.test2 = "create";
-        $scope.zaposlenik = {};
+        
 
-        $scope.saveVrstaRada = function (vrstaRada) {
+        $scope.saveAutomobil = function (automobil) {
             
 
            
-            vrstaRadaService.postVrstaRada(vrstaRada).then(function (data) {
+            automobilService.postAutomobil(automobil).then(function (data) {
 
-                toastr.success('Uspjesno kreirana Vrsta Rada', '',
+                toastr.success('Uspjesno kreiran Automobil', '',
                     {
                         onHidden: function () { $state.go("admin"); }
                     });
@@ -43,16 +42,16 @@
 
         };
 
-        $scope.editVrstaRada = function (vrstaRada) {
+        $scope.editAutomobil = function (automobil) {
 
             
            
 
 
 
-            vrstaRadaService.editVrstaRada(vrstaRada).then(function (data) {
+            automobilService.editAutomobil(automobil).then(function (data) {
 
-                toastr.success('Uspjesno izmijenjena vrsta rada', '',
+                toastr.success('Uspjesno izmijenjen automobil', '',
                     {
                         onHidden: function () { $state.go("admin"); }
                     });

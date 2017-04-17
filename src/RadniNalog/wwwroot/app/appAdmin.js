@@ -58,16 +58,63 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
 
     $stateProvider.state("createVrstaRada", {
 
-        url: "/kreirajVrsuRada",
+        url: "/kreirajVrstuRada",
         templateUrl: "../templates/createVrstaRada.html",
         controller: "CreateVrstaRadaController"
 
     });
     $stateProvider.state("editVrstaRada", {
 
-        url: "/editZaposlenika/:id",
+        url: "/editVrstaRada/:id",
         templateUrl: "../templates/editVrstaRada.html",
         controller: "CreateVrstaRadaController"
+
+    });
+
+    $stateProvider.state("mjestoRada", {
+
+        url: "/mjestoRada",
+        templateUrl: "../templates/mjestoRada.html",
+        controller: "mjestoRadaController"
+
+    });
+
+    $stateProvider.state("createmjestoRada", {
+
+        url: "/kreirajMjestoRada",
+        templateUrl: "../templates/createMjestoRada.html",
+        controller: "CreateMjestoRadaController"
+
+    });
+    $stateProvider.state("editMjestoRada", {
+
+        url: "/editMjestoRada/:id",
+        templateUrl: "../templates/editMjestoRada.html",
+        controller: "CreateMjestoRadaController"
+
+    });
+
+
+    $stateProvider.state("automobil", {
+
+        url: "/automobil",
+        templateUrl: "../templates/automobil.html",
+        controller: "automobilController"
+
+    });
+
+    $stateProvider.state("createAutomobil", {
+
+        url: "/kreirajAutomobil",
+        templateUrl: "../templates/createAutomobil.html",
+        controller: "CreateAutomobilController"
+
+    });
+    $stateProvider.state("editAutomobil", {
+
+        url: "/editAutomobil/:id",
+        templateUrl: "../templates/editAutomobil.html",
+        controller: "CreateAutomobilController"
 
     });
 
