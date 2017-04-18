@@ -1,5 +1,5 @@
 ﻿<div id="radniNalog2">
-<a ui-sref="createVrstaRada" class="btn btn-danger btn-block btn-lg">Dodaj Vrstu Rada</a>
+<a ui-sref="createAutomobil" class="btn btn-danger btn-block btn-lg">Dodaj Automobil</a>
 <div class="panel panel-primary" id="radniNalog">
     <div class="panel-heading text-center"><h3>Panel Heading</h3></div>
     <div class="panel-body">
@@ -10,18 +10,18 @@
                 <td data-title="'ID'" sortable="'id'" filter="{ 'id': 'text' }">
                     {{user.id}}
                 </td>
-                <td data-title="'NAZIV'" sortable="'naziv'" filter="{ 'naziv': 'text' }">
-                    {{user.naziv | limitTo: 100 }}
+                <td data-title="'REGISTRACIJA'" sortable="'naziv'" filter="{ 'registracija': 'text' }">
+                    {{user.registracija | limitTo: 100 }}
                 
                    
                    
                 </td>
                 <td>
-                    <a ui-sref="editVrstaRada({id:user.id})"  class="btn btn-primary btn-sm">Uredi</a>
+                    <a ui-sref="editAutomobil({id:user.id})"  class="btn btn-primary btn-sm">Uredi</a>
 
                 </td>
                 <td>
-                    <button ng-click="removeVrstaRada(user)" class="btn btn-danger btn-sm">Izbriši</button>
+                    <button ng-click="removeAutomobil(user)" class="btn btn-danger btn-sm">Izbriši</button>
 
                 </td>
             </tr>

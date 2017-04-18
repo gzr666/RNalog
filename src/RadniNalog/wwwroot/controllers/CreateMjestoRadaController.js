@@ -2,14 +2,14 @@
 (function () {
 
     angular.module("appAdmin")
-    .controller("CreateVrstaRadaController", function ($scope, $rootScope, $http, vrstaRadaService, toastr, $state, $stateParams) {
+    .controller("CreateMjestoRadaController", function ($scope, $rootScope, $http, mjestoRadaService, toastr, $state, $stateParams) {
         
 
 
       
-        vrstaRadaService.dohvatiVrstaRada($stateParams.id).then(function (data) {
+        mjestoRadaService.dohvatiMjestoRada($stateParams.id).then(function (data) {
 
-            $scope.vrstaRada = data;
+            $scope.mjestoRada = data;
 
         }, function (error) {
 
@@ -19,16 +19,15 @@
 
 
 
-        $scope.test2 = "create";
-        $scope.zaposlenik = {};
+        
 
-        $scope.saveVrstaRada = function (vrstaRada) {
+        $scope.saveMjestoRada = function (mjestoRada) {
             
 
            
-            vrstaRadaService.postVrstaRada(vrstaRada).then(function (data) {
+            mjestoRadaService.postMjestoRada(mjestoRada).then(function (data) {
 
-                toastr.success('Uspjesno kreirana Vrsta Rada', '',
+                toastr.success('Uspjesno kreirano Mjesto Rada', '',
                     {
                         onHidden: function () { $state.go("admin"); }
                     });
@@ -43,16 +42,16 @@
 
         };
 
-        $scope.editVrstaRada = function (vrstaRada) {
+        $scope.editMjestoRada = function (mjestoRada) {
 
             
            
 
 
 
-            vrstaRadaService.editVrstaRada(vrstaRada).then(function (data) {
+            mjestoRadaService.editMjestoRada(mjestoRada).then(function (data) {
 
-                toastr.success('Uspjesno izmijenjena vrsta rada', '',
+                toastr.success('Uspjesno izmijenjeno mjesto rada', '',
                     {
                         onHidden: function () { $state.go("admin"); }
                     });
