@@ -11,12 +11,22 @@
                 <legend>Radni Nalog</legend>
 
                 
+            <datepicker date-format="dd-MM-yyyy" selector="form-control">
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="textinput">Datum</label>
+                    <div class="col-md-5">
+                        <input id="textinput" name="textinput" ng-model="rnalog.Datum" placeholder="Odaberi datum" class="form-control input-md" type="datetime">
+
+                    </div>
+                </div>
+            </datepicker>
 
                 <!-- Select Basic -->
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="selectbasic">Rukovoditelj</label>
                     <div class="col-md-5">
-                        <select class="form-control" ng-model="Srukovoditelj" ng-options="rukovoditelj.ime for rukovoditelj in rukovoditelji" ng-change="clickMe(Srukovoditelj)">
+                        <select class="form-control" ng-model="rnalog.Rukovoditelj" ng-options="rukovoditelj.ime for rukovoditelj in rukovoditelji" ng-change="clickMe(Srukovoditelj)">
 
                             <option value="">Odaberi Rukovoditelja</option>
                         </select>
@@ -27,7 +37,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="selectbasic">Izvršitelj 1</label>
                 <div class="col-md-5">
-                    <select class="form-control" ng-model="Sizvrsitelj1" ng-options="izvrsitelj1.ime for izvrsitelj1 in izvrsitelji1" ng-change="clickMe(Sizvrsitelj1)">
+                    <select class="form-control" ng-model="rnalog.Izvrsitelj2" ng-options="izvrsitelj1.ime for izvrsitelj1 in izvrsitelji1" ng-change="clickMe(Sizvrsitelj1)">
 
                         <option value="">Odaberi Izvršitelja 1</option>
                     </select>
@@ -38,7 +48,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="selectbasic">Izvršitelj 2</label>
                 <div class="col-md-5">
-                    <select class="form-control" ng-model="Sizvrsitelj2" ng-options="izvrsitelj2.ime for izvrsitelj2 in izvrsitelji2" ng-change="clickMe(Sizvrsitelj2)">
+                    <select class="form-control" ng-model="rnalog.Izvrsitelj3" ng-options="izvrsitelj2.ime for izvrsitelj2 in izvrsitelji2" ng-change="clickMe(Sizvrsitelj2)">
 
                         <option value="">Odaberi Izvršitelja2</option>
                     </select>
@@ -51,62 +61,53 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="selectbasic">Putni Nalog</label>
                 <div class="col-md-5">
-                    <select class="form-control" ng-model="selectedNalog" ng-options="nalog.name for nalog in pNalozi" ng-change="clickMe(selectedZaposlenik)">
+                    <select class="form-control" ng-model="rnalog.PutniNalog" ng-options="nalog.name for nalog in pNalozi" ng-change="clickMe(selectedZaposlenik)">
 
                         <option value="">Putni Nalog (DA/NE)</option>
                     </select>
                 </div>
             </div>
 
-                <!-- Select Basic -->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="selectbasic">Mjesto Rada</label>
-                    <div class="col-md-5">
-                        <select id="selectbasic" name="selectbasic" class="form-control">
-                            <option value="1">Option one</option>
-                            <option value="2">Option two</option>
-                        </select>
-                    </div>
-                </div>
+            <!-- Select Basic -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="selectbasic">Mjesto Rada</label>
+                <div class="col-md-5">
+                    <select class="form-control" ng-model="rnalog.MjestoRadaID" ng-options="mjestoRada.ime for mjestoRada in mjestaRada" ng-change="clickMe(mjestoRada)">
 
-                <!-- Select Basic -->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="selectbasic">Vrsta Rada</label>
-                    <div class="col-md-5">
-                        <select id="selectbasic" name="selectbasic" class="form-control">
-                            <option value="1">Option one</option>
-                            <option value="2">Option two</option>
-                        </select>
-                    </div>
+                        <option value="">Odaberi Mjesto Rada</option>
+                    </select>
                 </div>
+            </div>
 
-                <!-- Select Basic -->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="selectbasic">Registracija</label>
-                    <div class="col-md-5">
-                        <select id="selectbasic" name="selectbasic" class="form-control">
-                            <option value="1">Option one</option>
-                            <option value="2">Option two</option>
-                        </select>
-                    </div>
+            <!-- Select Basic -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="selectbasic">Vrsta Rada</label>
+                <div class="col-md-5">
+                    <select class="form-control" ng-model="rnalog.VrstaRadaID" ng-options="vrstaRada.naziv for vrstaRada in vrsteRada" ng-change="clickMe(vrstaRada)">
+
+                        <option value="">Odaberi Vrstu Rada</option>
+                    </select>
                 </div>
+            </div>
 
-            <datepicker date-format="dd-MM-yyyy" selector="form-control">
-                <!-- Text input-->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="textinput">Datum</label>
-                    <div class="col-md-5">
-                        <input id="textinput" name="textinput" placeholder="Odaberi datum" class="form-control input-md" type="datetime">
+            <!-- Select Basic -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="selectbasic">Registracija</label>
+                <div class="col-md-5">
+                    <select class="form-control" ng-model="rnalog.AutomobilID" ng-options="automobil.registracija for automobil in automobili" ng-change="clickMe(automobil)">
 
-                    </div>
+                        <option value="">Odaberi Registraciju</option>
+                    </select>
                 </div>
-            </datepicker>
+            </div>
+
+           
 
             <!-- Text input-->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textinput">Opis Radova</label>
                 <div class="col-md-5">
-                    <textarea id="textinput" name="textinput" placeholder="Opis Radova" class="form-control input-md" type="text" cols="30" rows="5" style="min-width: 100%"></textarea>
+                    <textarea id="textinput" name="textinput" ng-model="rnalog.OpisRadova"placeholder="Opis Radova" class="form-control input-md" type="text" cols="30" rows="5" style="min-width: 100%"></textarea>
 
                 </div>
             </div>
@@ -115,7 +116,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textinput">Materijal</label>
                 <div class="col-md-5">
-                    <textarea id="textinput" name="textinput" placeholder="Materijal" class="form-control input-md" type="text" cols="30" rows="5" style="min-width: 100%"></textarea>
+                    <textarea id="textinput" name="textinput" ng-model="rnalog.Materijal" placeholder="Materijal" class="form-control input-md" type="text" cols="30" rows="5" style="min-width: 100%"></textarea>
 
                 </div>
             </div>
@@ -124,7 +125,7 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="singlebutton">Spremi Nalog</label>
                     <div class="col-md-4">
-                        <button id="singlebutton" name="singlebutton" class="btn btn-success">Spremi</button>
+                        <button id="singlebutton" name="singlebutton" class="btn btn-success" ng-click="saveNalog(rnalog)">Spremi</button>
                     </div>
                 </div>
 

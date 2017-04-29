@@ -10,10 +10,13 @@
         $scope.rukovoditelji = [];
         $scope.izvrsitelji1 = [];
         $scope.izvrsitelji2 = [];
-
         $scope.pNalozi = [{ id: 1, name: "DA" }, { id: 2, name: "NE" }];
+        $scope.mjestaRada = [];
+        $scope.vrsteRada = [];
+        $scope.automobili = [];
 
 
+        //dohvati zaposlenike
         $http.get("/api/zaposlenici").success(function (data) {
 
 
@@ -23,11 +26,33 @@
             angular.copy(data, $scope.izvrsitelji2);
         });
 
+        //dohvati mjesta rada
+        $http.get("/api/MjestoRada").success(function (data) {
 
-        $scope.clickMe2 = function (item)
+            angular.copy(data, $scope.mjestaRada);
+
+        });
+
+        //dohvati vrste rada
+        $http.get("/api/VrstaRada").success(function (data) {
+
+            angular.copy(data, $scope.vrsteRada);
+
+        });
+
+        //dohvati automobile
+        $http.get("/api/Automobil").success(function (data) {
+
+            angular.copy(data, $scope.automobili);
+
+        });
+
+
+        $scope.saveNalog = function (nalog)
         {
 
-            
+            console.log(nalog);
+            console.log(nalog.Rukovoditelj.id + nalog.Rukovoditelj.ime);
         }
 
         $http.get("app/data.json").then((function (data2) {

@@ -14,6 +14,7 @@ using RadniNalog.Models;
 using RadniNalog.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Http;
+using RazorPDFCore;
 
 namespace RadniNalog
 {
@@ -67,6 +68,8 @@ namespace RadniNalog
             services.AddTransient<ISmsSender, AuthMessageSender>();
 
             services.AddTransient<IFillRole, FillRole>();
+
+            services.AddSingleton<PdfResultExecutor>();
            
 
            
