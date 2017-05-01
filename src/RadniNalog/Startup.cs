@@ -62,6 +62,8 @@ namespace RadniNalog
                 .AddDefaultTokenProviders();
 
             services.AddMvc();
+            //    .AddJsonOptions(
+            //options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore ); ;
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();

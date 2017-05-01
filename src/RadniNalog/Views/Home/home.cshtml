@@ -12,7 +12,7 @@
 
        
         <div class="panel panel-primary" id="radniNalog">
-            <div class="panel-heading text-center"><h3>Panel Heading</h3></div>
+            <div class="panel-heading text-center"><h3>Radni Nalozi</h3></div>
             <div class="panel-body">
 
 
@@ -25,24 +25,31 @@
                 <table ng-table="usersTable" show-filter="true" class="table table-striped table-condensed ">
 
                     <tr ng-repeat="user in data">
-                        <td data-title="'Id'" sortable="'id'" filter="{ 'id': 'text' }">
-                            {{user.id}}
+                       
+                        <td data-title="'Datum'" sortable="'datum'" filter="{ 'datum': 'text' }">
+                            {{user.datum | date: 'dd/MM/yyyy' }}
                         </td>
-                        <td data-title="'First Name'" sortable="'first_name'" filter="{ 'first_name': 'text' }">
-                            {{user.first_name | limitTo: 9 }}
+                        <td data-title="'Rukovoditelj'" sortable="'rukovoditelj'" filter="{ 'rukovoditelj': 'text' }">
+                            {{user.rukovoditelj | limitTo: 20 }}
                         </td>
-                        <td data-title="'Last Name'" filter="{ 'last_name': 'text' }">
-                            {{user.last_name}}
+                        <td data-title="'Izvrsitelj2'" sortable="'izvrsitelj2'" filter="{ 'izvrsitelj2': 'text' }">
+                            {{user.izvrsitelj2 ? user.izvrsitelj2 : "-"}}
                         </td>
-                        <td data-title="'e-mail'" filter="{ 'email': 'text' }">
-                            {{user.email}}
+                        <td data-title="'Izvrsitelj3'" sortable="'izvrsitelj3'" filter="{ 'izvrsitelj3': 'text' }">
+                            {{user.izvrsitelj3 ? user.izvrsitelj3 : "-"}}
                         </td>
-                        <td data-title="'Country'" filter="{ 'country': 'text' }">
-                            {{user.country}}
+                        <td data-title="'Mjesto Rada'" sortable="'mjestoRada.ime'" filter="{ 'mjestoRada.ime': 'text' }">
+                            {{user.mjestoRada.ime}}
                         </td>
-                        <td data-title="'IP'" filter="{ 'ip_address': 'text' }">
-                            {{user.ip_address}}
+
+                        <td data-title="'Automobil'" sortable="'automobil.registracija'" filter="{ 'automobil.registracija': 'text' }">
+                            {{user.automobil.registracija}}
                         </td>
+
+                        <td data-title="'Opis Radova'" sortable="'opisRadova'" filter="{ 'opisRadova': 'text' }">
+                            {{user.opisRadova}}
+                        </td>
+                        
 
                        
 
@@ -55,7 +62,7 @@
 
                         </td>
                         <td>
-                            <button class="btn btn-danger btn-sm">Izbriši</button>
+                            <button class="btn btn-danger btn-sm" ng-click="removeNalog(user.id)">Izbriši</button>
 
                         </td>
                         }

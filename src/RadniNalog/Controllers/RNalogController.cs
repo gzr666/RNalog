@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RadniNalog.Data;
 using RadniNalog.Models;
+using System.Globalization;
+using RadniNalog.ViewModels;
 
 namespace RadniNalog.Controllers
 {
@@ -23,10 +25,40 @@ namespace RadniNalog.Controllers
 
         // GET: api/RNalog
         [HttpGet]
-        public IEnumerable<RNalog> GetRadniNalozi()
+        public IEnumerable<RNalog> GetRadniNalozi(bool includeAll=false)
         {
-            return _context.RadniNalozi;
+
+            if (includeAll)
+            {
+
+
+                return _context.RadniNalozi.Include(v => v.VrstaRada).Include(m => m.MjestoRada).Include(a => a.Automobil);
+
+                
+
+              
+               
+
+            }
+            else
+            {
+
+
+
+                return _context.RadniNalozi;
+            }
         }
+
+
+        [HttpGet,Route("/api/nalozi")]
+        public IEnumerable<RNalogViewModel> GetRadniNalozi2(bool includeAll = false)
+        {
+
+            var lista = ModelFactory.GetRNalozi(_context.RadniNalozi.Include(v => v.VrstaRada).Include(m => m.MjestoRada).Include(a => a.Automobil).ToList());
+
+            return lista;
+        }
+
 
         // GET: api/RNalog/5
         [HttpGet("{id}")]
@@ -84,21 +116,75 @@ namespace RadniNalog.Controllers
 
         // POST: api/RNalog
         [HttpPost]
-        public async Task<IActionResult> PostRNalog([FromBody] RNalog rNalog)
+        public async Task<IActionResult> PostRNalog([FromBody]  RNalog rNalog)
         {
+            string correctdate = rNalog.Datum.ToString();
+            //DateTime dt = Convert.ToDateTime(rNalog.Datum.ToString("MM/dd/yyyy"));
+            //rNalog.Datum = dt;
+
+           
+            rNalog.Datum = DateTime.Now;
+
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            _context.RadniNalozi.Add(rNalog);
+           
+            Automobil auto = _context.Automobili.Where(a => a.ID == rNalog.AutomobilID).FirstOrDefault();
+            MjestoRada rad = _context.MjestoRada.Where(m => m.ID == rNalog.MjestoRadaID).FirstOrDefault();
+            VrstaRada vrsta = _context.VrstaRada.Where(vr => vr.ID == rNalog.VrstaRadaID).FirstOrDefault();
+
+            //rNalog.Automobil = auto;
+            //rNalog.MjestoRada = rad;
+            //rNalog.VrstaRada = vrsta;
+
+
+            // string correctdate = rNalog.Datum.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
+
+            // DateTime dt = DateTime.ParseExact(correctdate, "dd/MM/yyyy", CultureInfo.GetCultureInfoByIetfLanguageTag("hr-HR"));
+
+
+
+
+
+
+
+            RNalog nalog = new RNalog
+            {
+                Automobil = auto,
+                MjestoRada = rad,
+                VrstaRada = vrsta,
+                AutomobilID = rNalog.AutomobilID,
+                Datum = rNalog.Datum,
+                Izvrsitelj2 = rNalog.Izvrsitelj2,
+                Izvrsitelj3 = rNalog.Izvrsitelj3,
+                Materijal = rNalog.Materijal,
+                MjestoRadaID = rNalog.MjestoRadaID,
+                OpisRadova = rNalog.OpisRadova,
+                PutniNalog = rNalog.PutniNalog,
+                Rukovoditelj = rNalog.Rukovoditelj,
+                VrstaRadaID = rNalog.VrstaRadaID
+
+
+
+            };
+
+
+
+            _context.Entry(nalog).State = EntityState.Added;
+
+
+           // _context.RadniNalozi.Add(rNalog);
+            
             try
             {
-                await _context.SaveChangesAsync();
+               await _context.SaveChangesAsync();
             }
             catch (DbUpdateException)
             {
-                if (RNalogExists(rNalog.ID))
+                if (RNalogExists(nalog.ID))
                 {
                     return new StatusCodeResult(StatusCodes.Status409Conflict);
                 }
@@ -108,7 +194,7 @@ namespace RadniNalog.Controllers
                 }
             }
 
-            return CreatedAtAction("GetRNalog", new { id = rNalog.ID }, rNalog);
+            return CreatedAtAction("GetRNalog", new { id = nalog.ID }, nalog);
         }
 
         // DELETE: api/RNalog/5
