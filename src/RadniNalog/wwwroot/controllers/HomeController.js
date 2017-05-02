@@ -2,7 +2,7 @@
 (function () {
 
     angular.module("myApp")
-    .controller("HomeController", function ($scope, $rootScope, $http, $filter, ngTableParams) {
+    .controller("HomeController", function ($scope, $rootScope, $http, $filter, ngTableParams, toastr,$state, $stateParams) {
         
        
         $scope.users = [];
@@ -10,10 +10,13 @@
         $scope.rukovoditelji = [];
         $scope.izvrsitelji1 = [];
         $scope.izvrsitelji2 = [];
-
         $scope.pNalozi = [{ id: 1, name: "DA" }, { id: 2, name: "NE" }];
+        $scope.mjestaRada = [];
+        $scope.vrsteRada = [];
+        $scope.automobili = [];
 
 
+        //dohvati zaposlenike
         $http.get("/api/zaposlenici").success(function (data) {
 
 
@@ -23,14 +26,105 @@
             angular.copy(data, $scope.izvrsitelji2);
         });
 
+        //dohvati mjesta rada
+        $http.get("/api/MjestoRada").success(function (data) {
 
-        $scope.clickMe2 = function (item)
+            angular.copy(data, $scope.mjestaRada);
+
+        });
+
+        //dohvati vrste rada
+        $http.get("/api/VrstaRada").success(function (data) {
+
+            angular.copy(data, $scope.vrsteRada);
+
+        });
+
+        //dohvati automobile
+        $http.get("/api/Automobil").success(function (data) {
+
+            angular.copy(data, $scope.automobili);
+
+        });
+
+
+        $scope.removeNalog = function (id)
         {
+            $http({
+                method: 'DELETE',
+                url: '/api/RNalog/' + id
+            }).then(function successCallback(response) {
+                // this callback will be called asynchronously
+                // when the response is available
+                toastr.success('Uspjesno izbrisan Radni Nalog', '',
+                    {
+                        onHidden: function () { $state.go("home"); }
+                    });
+               
 
-            
+
+            }, function errorCallback(response) {
+
+                toastr.error('Uspjesno kreiran Radni Nalog', '',
+                    {
+                        onHidden: function () { $state.go("home"); }
+                    });
+                
+            });
+
+
         }
 
-        $http.get("app/data.json").then((function (data2) {
+
+        $scope.saveNalog = function (nalog) {
+
+         
+
+            
+
+            if (nalog.Izvrsitelj3 == undefined)
+            {
+                nalog.Izvrsitelj3 = {};
+                nalog.Izvrsitelj3.ime = "";
+            }
+
+            if (nalog.Izvrsitelj2 == undefined) {
+                nalog.Izvrsitelj2 = {};
+                nalog.Izvrsitelj2.ime = "";
+            }
+
+            var rnalog = {
+             
+                OpisRadova: nalog.OpisRadova,
+                Materijal: nalog.Materijal,
+                Rukovoditelj: nalog.Rukovoditelj.ime,
+                Izvrsitelj2: nalog.Izvrsitelj2.ime,
+                Izvrsitelj3: nalog.Izvrsitelj3.ime,
+                PutniNalog: nalog.PutniNalog.name,
+                AutomobilID: nalog.AutomobilID.id,
+                MjestoRadaID: nalog.MjestoRadaID.id,
+                VrstaRadaID: nalog.VrstaRadaID.id
+
+
+
+            };
+
+            $http.post("/api/RNalog", rnalog).then(function (data) {
+
+                toastr.success('Uspjesno kreiran Radni Nalog', '',
+                     {
+                         onHidden: function () { $state.go("home"); }
+                     });
+
+            }, function (error) {
+
+                toastr.error('Došlo je do greške...Pokušaj ponovo', '');
+            });
+
+
+        }
+
+        $http.get("api/nalozi").then((function (data2) {
 
             console.log(data2);
 

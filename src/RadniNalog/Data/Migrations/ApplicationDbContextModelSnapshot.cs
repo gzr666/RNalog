@@ -177,7 +177,8 @@ namespace RadniNalog.Data.Migrations
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Registracija");
+                    b.Property<string>("Registracija")
+                        .IsRequired();
 
                     b.HasKey("ID");
 
@@ -189,7 +190,8 @@ namespace RadniNalog.Data.Migrations
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Ime");
+                    b.Property<string>("Ime")
+                        .IsRequired();
 
                     b.HasKey("ID");
 
@@ -215,7 +217,7 @@ namespace RadniNalog.Data.Migrations
 
                     b.Property<string>("OpisRadova");
 
-                    b.Property<int>("PutniNalog");
+                    b.Property<string>("PutniNalog");
 
                     b.Property<string>("Rukovoditelj");
 
@@ -237,7 +239,8 @@ namespace RadniNalog.Data.Migrations
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Naziv");
+                    b.Property<string>("Naziv")
+                        .IsRequired();
 
                     b.HasKey("ID");
 
@@ -249,7 +252,8 @@ namespace RadniNalog.Data.Migrations
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Ime");
+                    b.Property<string>("Ime")
+                        .IsRequired();
 
                     b.HasKey("ID");
 
@@ -297,18 +301,15 @@ namespace RadniNalog.Data.Migrations
                 {
                     b.HasOne("RadniNalog.Models.Automobil", "Automobil")
                         .WithMany("Nalozi")
-                        .HasForeignKey("AutomobilID")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("AutomobilID");
 
                     b.HasOne("RadniNalog.Models.MjestoRada", "MjestoRada")
                         .WithMany("Nalozi")
-                        .HasForeignKey("MjestoRadaID")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("MjestoRadaID");
 
                     b.HasOne("RadniNalog.Models.VrstaRada", "VrstaRada")
                         .WithMany("Nalozi")
-                        .HasForeignKey("VrstaRadaID")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("VrstaRadaID");
                 });
         }
     }

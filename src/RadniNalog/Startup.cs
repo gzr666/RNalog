@@ -14,6 +14,7 @@ using RadniNalog.Models;
 using RadniNalog.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Http;
+using RazorPDFCore;
 
 namespace RadniNalog
 {
@@ -61,12 +62,16 @@ namespace RadniNalog
                 .AddDefaultTokenProviders();
 
             services.AddMvc();
+            //    .AddJsonOptions(
+            //options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore ); ;
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
 
             services.AddTransient<IFillRole, FillRole>();
+
+            services.AddSingleton<PdfResultExecutor>();
            
 
            

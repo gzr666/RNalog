@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using RadniNalog.Models;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace RadniNalog.Data
 {
@@ -34,6 +35,12 @@ namespace RadniNalog.Data
             builder.Entity<RNalog>().ToTable("RadniNalog");
             builder.Entity<VrstaRada>().ToTable("VrstaRada");
             builder.Entity<Zaposlenik>().ToTable("Zaposlenik");
+
+
+            //cascade deletions
+            builder.Entity<RNalog>().HasOne(r => r.Automobil).WithMany(r => r.Nalozi).OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<RNalog>().HasOne(r => r.MjestoRada).WithMany(r => r.Nalozi).OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<RNalog>().HasOne(r => r.VrstaRada).WithMany(r => r.Nalozi).OnDelete(DeleteBehavior.Restrict);
 
 
         }

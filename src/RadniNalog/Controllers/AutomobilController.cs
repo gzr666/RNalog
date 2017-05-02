@@ -30,18 +30,35 @@ namespace RadniNalog.Controllers
 
         // GET: api/Automobil/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetAutomobil([FromRoute] int id)
+        public async Task<IActionResult> GetAutomobil([FromRoute] int id,bool rnalog)
         {
+            
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            Automobil automobil = await _context.Automobili.SingleOrDefaultAsync(m => m.ID == id);
+            Automobil automobil;
+
+            if (rnalog)
+            {
+                automobil = await _context.Automobili.Include(a => a.Nalozi).FirstOrDefaultAsync(m => m.ID == id);
+            }
+            else
+            {
+                automobil = await _context.Automobili.SingleOrDefaultAsync(m => m.ID == id);
+            }
+
+           
+
 
             if (automobil == null)
             {
                 return NotFound();
+            }
+
+            if (rnalog)
+            {
             }
 
             return Ok(automobil);

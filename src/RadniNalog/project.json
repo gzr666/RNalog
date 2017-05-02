@@ -1,4 +1,4 @@
-﻿{
+{
   "userSecretsId": "aspnet-RadniNalog-a0b79f4f-8f32-449a-a6d7-7065132880d4",
 
   "dependencies": {
@@ -7,7 +7,7 @@
     "Microsoft.AspNetCore.Diagnostics": "1.0.0",
     "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "1.0.0",
     "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.0.0",
-    "Microsoft.AspNetCore.Mvc": "1.0.0",
+    "Microsoft.AspNetCore.Mvc": "1.0.1",
     "Microsoft.AspNetCore.Razor.Tools": {
       "version": "1.0.0-preview2-final",
       "type": "build"
@@ -36,10 +36,11 @@
       "version": "1.0.0-preview2-final",
       "type": "build"
     },
-    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc":  {
+    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
       "version": "1.0.0-preview2-final",
       "type": "build"
-    }
+    },
+    "RazorPDFCore": "1.0.3"
   },
 
   "tools": {
@@ -57,7 +58,7 @@
   },
 
   "frameworks": {
-    "net46": { }
+    "net461": { }
   },
 
   "buildOptions": {
