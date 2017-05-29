@@ -72,6 +72,8 @@ namespace RadniNalog
             services.AddTransient<IFillRole, FillRole>();
 
             services.AddSingleton<PdfResultExecutor>();
+
+            services.AddNodeServices();
            
 
            

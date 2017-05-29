@@ -1,4 +1,6 @@
 ﻿/// <autosync enabled="true" />
+/// <reference path="../pdf.js" />
+/// <reference path="../pdfsingle.js" />
 /// <reference path="app/app.js" />
 /// <reference path="app/appadmin.js" />
 /// <reference path="controllers/AdminController.js" />
