@@ -11,8 +11,8 @@ using Microsoft.AspNetCore.NodeServices;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 using OfficeOpenXml;
-
-
+using RadniNalog.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace RadniNalog.Controllers
 {
@@ -46,12 +46,17 @@ namespace RadniNalog.Controllers
         }
 
 
-        [HttpGet("listaZaposlenika")]
+        [HttpGet("listaNaloga")]
         public  async Task<IActionResult> ListaZaposlenika([FromServices] INodeServices nodeServices)
         {
 
 
-            var zaposlenici = _context.Zaposlenici.ToList();
+            var nalozi = ModelFactory.GetRNalozi(_context.RadniNalozi.Include(v => v.VrstaRada).Include(m => m.MjestoRada).Include(a => a.Automobil).ToList());
+
+           
+
+            
+
 
             HttpContext.Response.ContentType = "application/pdf";
 
@@ -59,23 +64,25 @@ namespace RadniNalog.Controllers
             HttpContext.Response.Headers.Add("x-filename", filename);
             HttpContext.Response.Headers.Add("Access-Control-Expose-Headers", "x-filename");
 
-            var result = await nodeServices.InvokeAsync<byte[]>("./pdf",zaposlenici);
+            var result = await nodeServices.InvokeAsync<byte[]>("./pdf",nalozi);
             HttpContext.Response.Body.Write(result, 0, result.Length);
             return  new ContentResult();
         }
 
         
-        [HttpGet("zaposlenik/{id}")]
+        [HttpGet("pdfNalog/{id}")]
         public async Task<IActionResult> ZaposlenikSingle([FromServices] INodeServices nodeServices, [FromRoute] int id)
         {
 
-
-            var zaposlenik = _context.Zaposlenici.Where(z => z.ID == id).FirstOrDefault();
-
+            var nalozi = ModelFactory.GetRNalozi(_context.RadniNalozi.Include(v => v.VrstaRada).Include(m => m.MjestoRada).Include(a => a.Automobil).ToList());
 
 
+            var single = nalozi.SingleOrDefault(m => m.ID == id);
 
-            var result = await nodeServices.InvokeAsync<byte[]>("./pdfSingle", zaposlenik);
+
+
+
+            var result = await nodeServices.InvokeAsync<byte[]>("./pdfSingle", single);
 
             HttpContext.Response.ContentType = "application/pdf";
 

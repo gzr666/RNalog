@@ -71,3 +71,15 @@ body{
 #radniNalog2 {
     margin-top:60px;
 }
+
+#singlebutton {
+
+    width:280px;
+}
+
+
+table.tmx > tbody > tr:first-child > td:first-child>input[type=text]{
+
+
+background-color:black;
+}

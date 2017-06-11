@@ -27,9 +27,9 @@
                 <div class="form-group" ng-class="{'has-error': userForm.rukovoditelj.$invalid && !userForm.rukovoditelj.$pristine}">
                     <label class="col-md-4 control-label" for="selectbasic">Rukovoditelj</label>
                     <div class="col-md-5">
-                        <select name="rukovoditelj" class="form-control" ng-model="rnalog.Rukovoditelj" ng-options="rukovoditelj.ime for rukovoditelj in rukovoditelji" ng-change="clickMe(Srukovoditelj)" required>
+                        <select  name="rukovoditelj" class="form-control" ng-model="rnalog.Rukovoditelj" ng-options="rukovoditelj.ime for rukovoditelj in rukovoditelji"  required>
 
-                            <option value="">Odaberi Rukovoditelja</option>
+                            <option value="">Odaberi</option>
                         </select>
                     </div>
 
@@ -41,9 +41,9 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="selectbasic">Izvršitelj 1</label>
                 <div class="col-md-5">
-                    <select class="form-control" ng-model="rnalog.Izvrsitelj2" ng-options="izvrsitelj1.ime for izvrsitelj1 in izvrsitelji1" ng-change="clickMe(Sizvrsitelj1)">
+                    <select  class="form-control" ng-model="rnalog.Izvrsitelj2" ng-options="izvrsitelj1.ime for izvrsitelj1 in izvrsitelji1">
 
-                        <option value="">Odaberi Izvršitelja 1</option>
+                        <option value="">Odaberi</option>
                     </select>
                 </div>
             </div>
@@ -52,9 +52,9 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="selectbasic">Izvršitelj 2</label>
                 <div class="col-md-5">
-                    <select name="izvrsitelj3" class="form-control" ng-model="rnalog.Izvrsitelj3" ng-options="izvrsitelj2.ime for izvrsitelj2 in izvrsitelji2" ng-change="clickMe(Sizvrsitelj2)" >
+                    <select  name="izvrsitelj3" class="form-control" ng-model="rnalog.Izvrsitelj3" ng-options="izvrsitelj2.ime for izvrsitelj2 in izvrsitelji2"  >
 
-                        <option value="">Odaberi Izvršitelja2</option>
+                        <option value="">Odaberi</option>
                     </select>
                 </div>
 
@@ -68,9 +68,9 @@
             <div class="form-group" ng-class="{'has-error': userForm.pNalog.$invalid && !userForm.pNalog.$pristine}">
                 <label class="col-md-4 control-label" for="selectbasic">Putni Nalog</label>
                 <div class="col-md-5">
-                    <select name="pNalog" class="form-control" ng-model="rnalog.PutniNalog" ng-options="nalog.name for nalog in pNalozi" ng-change="clickMe(selectedZaposlenik)" required>
+                    <select  name="pNalog" class="form-control" ng-model="rnalog.PutniNalog" ng-options="nalog.name for nalog in pNalozi"  required>
 
-                        <option value="">Putni Nalog (DA/NE)</option>
+                        <option value="">Odaberi</option>
                     </select>
                 </div>
 
@@ -82,9 +82,9 @@
             <div class="form-group" ng-class="{'has-error': userForm.mRada.$invalid && !userForm.mRada.$pristine}">
                 <label class="col-md-4 control-label" for="selectbasic">Mjesto Rada</label>
                 <div class="col-md-5">
-                    <select name="mRada" class="form-control" ng-model="rnalog.MjestoRadaID" ng-options="mjestoRada.ime for mjestoRada in mjestaRada" ng-change="clickMe(mjestoRada)" required>
+                    <select  name="mRada" class="form-control" ng-model="rnalog.MjestoRadaID" ng-options="mjestoRada.ime for mjestoRada in mjestaRada"  required>
 
-                        <option value="">Odaberi Mjesto Rada</option>
+                        <option value="">Odaberi</option>
                     </select>
                 </div>
 
@@ -96,9 +96,9 @@
             <div class="form-group" ng-class="{'has-error': userForm.vRada.$invalid && !userForm.vRada.$pristine}">
                 <label class="col-md-4 control-label" for="selectbasic">Vrsta Rada</label>
                 <div class="col-md-5">
-                    <select name="vRada" class="form-control" ng-model="rnalog.VrstaRadaID" ng-options="vrstaRada.naziv for vrstaRada in vrsteRada" ng-change="clickMe(vrstaRada)" required>
+                    <select  name="vRada" class="form-control" ng-model="rnalog.VrstaRadaID" ng-options="vrstaRada.naziv for vrstaRada in vrsteRada" required>
 
-                        <option value="">Odaberi Vrstu Rada</option>
+                        <option value="">Odaberi</option>
                     </select>
                 </div>
 
@@ -110,9 +110,9 @@
             <div class="form-group" ng-class="{'has-error': userForm.automobil.$invalid && !userForm.automobil.$pristine}">
                 <label class="col-md-4 control-label" for="selectbasic">Registracija</label>
                 <div class="col-md-5">
-                    <select name="automobil" class="form-control" ng-model="rnalog.AutomobilID" ng-options="automobil.registracija for automobil in automobili" ng-change="clickMe(automobil)" required>
+                    <select  name="automobil" class="form-control" ng-model="rnalog.AutomobilID" ng-options="automobil.registracija for automobil in automobili"  required>
 
-                        <option value="">Odaberi Registraciju</option>
+                        <option value="">Odaberi</option>
                     </select>
                 </div>
 
@@ -147,7 +147,8 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="singlebutton">Spremi Nalog</label>
                     <div class="col-md-4">
-                        <button id="singlebutton" name="singlebutton" ng-disabled="userForm.$invalid" class="btn btn-success" ng-click="saveNalog(rnalog)">Spremi</button>
+                        <button  id="singlebutton" name="singlebutton" ng-disabled="userForm.$invalid" class="btn btn-success" ng-click="saveNalog(rnalog)">Spremi</button>
+                      
                     </div>
                 </div>
 

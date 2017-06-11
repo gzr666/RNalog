@@ -56,7 +56,20 @@ namespace RadniNalog.Controllers
 
             var lista = ModelFactory.GetRNalozi(_context.RadniNalozi.Include(v => v.VrstaRada).Include(m => m.MjestoRada).Include(a => a.Automobil).ToList());
 
+            
+
             return lista;
+        }
+
+        [HttpGet, Route("/api/nalozi/{id}")]
+        public RNalogViewModel GetRadniNalozi3(int id, bool includeAll = false)
+        {
+            var lista = ModelFactory.GetRNalozi(_context.RadniNalozi.Include(v => v.VrstaRada).Include(m => m.MjestoRada).Include(a => a.Automobil).ToList());
+
+            var single = lista.SingleOrDefault(m => m.ID == id);
+
+
+            return single;
         }
 
 
@@ -92,6 +105,9 @@ namespace RadniNalog.Controllers
             {
                 return BadRequest();
             }
+
+            //var nalog = await _context.RadniNalozi.SingleOrDefaultAsync(m => m.ID == id);
+            rNalog.Datum = DateTime.Now;
 
             _context.Entry(rNalog).State = EntityState.Modified;
 

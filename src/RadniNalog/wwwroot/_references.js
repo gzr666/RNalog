@@ -11,6 +11,7 @@
 /// <reference path="controllers/createcontroller.js" />
 /// <reference path="controllers/CreateMjestoRadaController.js" />
 /// <reference path="controllers/createvrstaradacontroller.js" />
+/// <reference path="controllers/editnalogcontroller.js" />
 /// <reference path="controllers/HomeController.js" />
 /// <reference path="controllers/mjestoradacontroller.js" />
 /// <reference path="controllers/radnicicontroller.js" />

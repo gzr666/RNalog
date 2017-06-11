@@ -1,7 +1,6 @@
 {
-  "directory": "wwwroot/lib",
-  "proxy":"http://gate01:8080",
-   "https-proxy":"http://gate01:8080"
+  "directory": "wwwroot/lib"
+  
 
 
 

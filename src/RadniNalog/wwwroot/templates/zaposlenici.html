@@ -1,13 +1,13 @@
 ﻿<div id="radniNalog2">
 <a ui-sref="createZaposlenik" class="btn btn-danger btn-block btn-lg">Dodaj Zaposlenika</a>
 <div class="panel panel-primary" id="radniNalog">
-    <div class="panel-heading text-center"><h3>Panel Heading</h3></div>
+    <div class="panel-heading text-center"><h3>Zaposlenici</h3></div>
     <div class="panel-body">
 
-        <table ng-table="usersTable" show-filter="true" class="table table-striped table-condensed ">
+        <table ng-table="usersTable" show-filter="true" class="table table-striped table-condensed table-bordered tmx">
 
             <tr ng-repeat="user in data">
-                <td data-title="'ID'" sortable="'id'" filter="{ 'id': 'text' }">
+                <td data-title="'ID'" sortable="'id'" filter="{ 'id': 'text' }" >
                     {{user.id}}
                 </td>
                 <td data-title="'IME'" sortable="'ime'" filter="{ 'ime': 'text' }">
