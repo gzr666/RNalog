@@ -50,9 +50,14 @@ namespace RadniNalog
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
 
+
+            /*Dodavanje servisa za interakciju s bazom u INJECT KONTAINER*/
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+
+            /*Servis koji obavlja sve vezano uz autentifikaciju i autorizaciju.
+             Ima mnostvo opcija za nacine logiranja,redirekcije itd....*/
             services.AddIdentity<ApplicationUser, IdentityRole>(options=> {
                 options.Cookies.ApplicationCookie.LoginPath = new PathString("/Account/Login");
                 options.Cookies.ApplicationCookie.AccessDeniedPath = new PathString("/Account/Authorization");

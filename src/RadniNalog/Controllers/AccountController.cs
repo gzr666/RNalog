@@ -133,6 +133,8 @@ namespace RadniNalog.Controllers
                 if (result.Succeeded)
                 {
                           
+                        /*Ovdje prilikom kreiranja novog usera ubacujemo usera u rolu*/
+
                         await _userManager.AddToRoleAsync(user, model.Rola);
 
                     
