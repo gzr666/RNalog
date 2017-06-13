@@ -13,6 +13,7 @@ namespace RadniNalog
         {
             var host = new WebHostBuilder()
                 .UseKestrel()
+                .UseUrls("http://DPED-IMALES:5000/#/home")
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()

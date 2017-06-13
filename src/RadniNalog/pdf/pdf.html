@@ -5699,12 +5699,70 @@
                        .affix {
                            position: fixed;
                        }
+
+            .marginax {
+
+
+                margin-bottom:40px;
+            }
         </style>
 
     
 
 </head>
 <body>
-    <p class="alert-danger text-center">test</p>
+
+    <div class="container">
+    <h2 class="alert-info text-center">Lista Radnih Naloga</h2>
+
+    
+        {{for nalozi}}
+        
+
+        <div class="panel panel-primary marginax" style="min-height:1200px;float:leftx">
+            <div class="panel-heading"><h4 class="text-center">Radni Nalog</h4></div>
+            <div class="panel-body">
+
+                <div class="row">
+
+                    <div class="col-md-6" style="width:100%;float:leftx">
+                        <p> <b>Datum Naloga:</b>  {{:datum}}</p>
+                        <p> <b>Mjesto Rada:</b>  {{:mjestoRada.ime}}</p>
+                        <p> <b>Putni Nalog:</b>  {{:putniNalog}}</p>
+                        <p> <b>Automobil:</b>  {{:automobil.registracija}}</p>
+                        <hr>
+                        <p> <b>Rukovoditelj:</b> {{:rukovoditelj}}</p>
+                        <p> <b>Izvršitelj1:</b> {{:izvrsitelj2}}</p>
+                        <p> <b>Izvršitelj2:</b> {{:izvrsitelj3}}</p>
+
+                   </div>
+
+                    <div class="col-md-6" style="width:100%;float:leftx">
+
+                        <p> <b>Vrsta Rada:</b>  {{:vrstaRada.naziv}}</p>
+                        <hr>
+                        <p> <b> Materijal:</b>  {{:materijal}}</p>
+                        <p> <b>Opis Rada:</b>  {{:opisRadova}}</p>
+
+                        <hr>
+
+                    </div>
+
+               </div>
+            
+            </div>
+        </div>
+
+        <div style='page-break-before: always;min-height:20%'></div>
+        {{/for}}
+    
+
+
+        </div>
+
+   
+
+    <script src="../wwwroot/lib/angular/angular.js"></script>
+
 </body>
 </html>

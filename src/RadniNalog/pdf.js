@@ -1,4 +1,4 @@
-﻿module.exports = function (callback, zaposlenici) {
+﻿module.exports = function (callback, rnalozi) {
     var jsreport = require('jsreport-core')();
     var jsrender = require('jsrender');
     //var handlebars = require("handlebars");
@@ -9,10 +9,18 @@
         return jsreport.render({
             template: {
 
-                content: tmpl.render({ zaps: zaposlenici }),
+                content: tmpl.render({ nalozi: rnalozi }),
                 engine: 'jsrender',
-                recipe: 'phantom-pdf'
+                recipe: 'phantom-pdf',
+                phantom:
+                {
+                    orientation: "portrait",
+                    format: "A4",
+                    footer: "<div style='text-align:center'>{#pageNum}/{#numPages}</div>"
+
+                }
             },
+            
             //data: {
             //    foo: test
             //}

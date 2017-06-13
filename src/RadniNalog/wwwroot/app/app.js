@@ -1,7 +1,7 @@
 ﻿/// <reference path="../lib/angular/angular.js" />
 
 
-var myApp = angular.module("myApp", ["ui.router", 'ngTable', 'chart.js', "toastr", "720kb.datepicker"]);
+var myApp = angular.module("myApp", ["ui.router", 'ngTable', 'chart.js', "toastr", "720kb.datepicker", "underscore"]);
 
 myApp.config(function ($stateProvider, $urlRouterProvider) {
 
@@ -22,6 +22,14 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
         url: "/kreirajNalog",
         templateUrl: "../templates/createNalog.html",
         controller: "HomeController"
+
+    });
+
+    $stateProvider.state("editNalog", {
+
+        url: "/editNalog/:id",
+        templateUrl: "../templates/editNalog.html",
+        controller: "EditNalogController"
 
     });
     $stateProvider.state("statistika", {

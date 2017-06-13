@@ -8,7 +8,7 @@ namespace RadniNalog.ViewModels
     public class RNalogViewModel
     {
         public int ID { get; set; }
-        public DateTime Datum { get; set; }
+        public String Datum { get; set; }
         public string OpisRadova { get; set; }
         public string Materijal { get; set; }
         public string Rukovoditelj { get; set; }

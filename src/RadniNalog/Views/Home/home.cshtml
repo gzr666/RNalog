@@ -2,11 +2,16 @@
 @using Microsoft.AspNetCore.Identity
 @using RadniNalog.Models
 
+
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 
+
+
 @{
-   Layout = null;
+    Layout = null;
+
+   
 }
 
 
@@ -22,7 +27,7 @@
                      <a ui-sref="createNalog" class="btn btn-danger btn-block btn-lg">Dodaj Nalog</a>
                 }
 
-                <table ng-table="usersTable" show-filter="true" class="table table-striped table-condensed ">
+                <table ng-table="usersTable" show-filter="true" class="table table-striped table-condensed table-bordered ">
 
                     <tr ng-repeat="user in data">
                        
@@ -38,17 +43,19 @@
                         <td data-title="'Izvrsitelj3'" sortable="'izvrsitelj3'" filter="{ 'izvrsitelj3': 'text' }">
                             {{user.izvrsitelj3 ? user.izvrsitelj3 : "-"}}
                         </td>
-                        <td data-title="'Mjesto Rada'" sortable="'mjestoRada.ime'" filter="{ 'mjestoRada.ime': 'text' }">
-                            {{user.mjestoRada.ime}}
+                        <td data-title="'Mjesto Rada'" sortable="'mjestoRada'" filter="{ 'mjestoRada': 'text' }">
+                            {{user.mjestoRada}}
                         </td>
 
-                        <td data-title="'Automobil'" sortable="'automobil.registracija'" filter="{ 'automobil.registracija': 'text' }">
-                            {{user.automobil.registracija}}
+                        <td data-title="'Automobil'" sortable="'automobil'" filter="{ 'automobil': 'text' }">
+                            {{user.automobil}}
                         </td>
 
                         <td data-title="'Opis Radova'" sortable="'opisRadova'" filter="{ 'opisRadova': 'text' }">
                             {{user.opisRadova}}
                         </td>
+
+                        
                         
 
                        
@@ -57,19 +64,44 @@
                         {
 
                         
-                        <td>
-                            <button class="btn btn-primary btn-sm">Uredi</button>
+                        <td data-title="'Uredi'">
+                            @*<button class="btn btn-primary btn-sm" ng-click="urediNalog(user.id)">Uredi</button>*@
+                            
+                            <a class="btn btn-primary btn-sm" ui-sref="editNalog({id:user.id})" >Uredi Nalog</a>
+                                
+
+                                
 
                         </td>
-                        <td>
-                            <button class="btn btn-danger btn-sm" ng-click="removeNalog(user.id)">Izbriši</button>
+                        <td data-title="'Brisanje'">
+
+                           
+                                            <button class="btn btn-danger btn-block" ng-click="removeNalog(user)" id="modalTesters">Izbriši</button>
+                                       
+
+
+
+                           
+
+                        </td>
+
+                        <td data-title="'Printaj Nalog'">
+                            <a href="/api/pdf/pdfNalog/{{user.id}}" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-print"></span><span> Isprintaj Nalog</span></a>
 
                         </td>
                         }
                     </tr>
                 </table>
 
+                
 
+                <div class="btn-group btn-group-justified">
+                    <a href="/api/pdf/listaNaloga" class="btn btn-primary btn-block btn-lg"><span class="glyphicon glyphicon-print"></span><span> Printaj Sve Naloge-PDF</span></a>
+                    <a href="/api/pdf" class="btn btn-primary btn-block btn-lg"><span class="glyphicon glyphicon-new-window"></span><span> Excel Export</span></a>
+                    
+                </div> 
+
+                
             </div>
 
         </div>

@@ -16,8 +16,8 @@ namespace RadniNalog.Controllers
         public IActionResult home()
         {
 
-
            
+
             return View();
         }
 
