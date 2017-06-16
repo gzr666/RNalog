@@ -101,14 +101,7 @@ namespace RadniNalog.Controllers
         public async Task<IActionResult> Excel()
         {
 
-            //test json-a
-            string jsonname = @"apexbaza/apexbaza.json";
-            var pathToFile = Path.Combine(_env.WebRootPath, jsonname);
-
-
-            var test2 = System.IO.File.ReadAllText(pathToFile);
             
-           // var test = JsonConvert.DeserializeObject<string>(test2);
 
 
             string webRoot = _env.WebRootPath;

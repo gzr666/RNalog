@@ -255,6 +255,11 @@ E:\Projects\RadniNalog\src\RadniNalog\Data\Migrations\20170501094505_cascade del
 E:\Projects\RadniNalog\src\RadniNalog\Data\Migrations\20170501100206_cascade delete 2.cs
 E:\Projects\RadniNalog\src\RadniNalog\Data\Migrations\20170501100206_cascade delete 2.Designer.cs
 E:\Projects\RadniNalog\src\RadniNalog\Data\Migrations\ApplicationDbContextModelSnapshot.cs
+E:\Projects\RadniNalog\src\RadniNalog\Models\ApexMjesto.cs
+E:\Projects\RadniNalog\src\RadniNalog\Models\ApexRegistracija.cs
+E:\Projects\RadniNalog\src\RadniNalog\Models\ApexSer.cs
+E:\Projects\RadniNalog\src\RadniNalog\Models\ApexVrsta.cs
+E:\Projects\RadniNalog\src\RadniNalog\Models\ApexZaposlenik.cs
 E:\Projects\RadniNalog\src\RadniNalog\Models\ApplicationUser.cs
 E:\Projects\RadniNalog\src\RadniNalog\Models\Automobil.cs
 E:\Projects\RadniNalog\src\RadniNalog\Models\MjestoRada.cs

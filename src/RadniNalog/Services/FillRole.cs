@@ -1,9 +1,13 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using RadniNalog.Data;
 using RadniNalog.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,14 +19,163 @@ namespace RadniNalog.Services
         private RoleManager<IdentityRole> _roleManager;
         private SignInManager<ApplicationUser> _signinManager;
         private  UserManager<ApplicationUser> _userManager;
+        private readonly IHostingEnvironment _env;
 
 
-        public FillRole(ApplicationDbContext context,RoleManager<IdentityRole> roleManager, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+        public FillRole(ApplicationDbContext context,RoleManager<IdentityRole> roleManager, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IHostingEnvironment env)
         {
             _context = context;
             _roleManager = roleManager;
             _userManager = userManager;
             _signinManager = signInManager;
+            _env = env;
+
+
+        }
+
+        public async void fillNalog()
+        {
+
+            //fill zaposlenika
+
+
+            string jsonname = @"apexbaza/zaposlenici.json";
+            var pathToFile = Path.Combine(_env.WebRootPath, jsonname);
+
+
+            var test2 = System.IO.File.ReadAllText(pathToFile);
+        
+
+            var test = JsonConvert.DeserializeObject<List<ApexZaposlenik>>(test2);
+
+           
+
+            if (_context.Zaposlenici.Count() == 0)
+            {
+
+                foreach (var apex in test)
+                {
+                    Zaposlenik z = new Zaposlenik
+                    {
+
+                        Ime = apex.FIELD1
+
+                    };
+                    // _context.Zaposlenici.Add(z);
+                    _context.Entry(z).State = EntityState.Added;
+
+
+                }
+
+                _context.SaveChanges();
+
+            }
+            else
+            {
+                
+            }
+
+            //fill vrsta rada
+
+            string jsonnameVrsta = @"apexbaza/vrstarada.json";
+            var pathToFile2 = Path.Combine(_env.WebRootPath, jsonnameVrsta);
+
+
+            var testVrsta = System.IO.File.ReadAllText(pathToFile2);
+
+
+            var vrste = JsonConvert.DeserializeObject<List<ApexVrsta>>(testVrsta);
+
+
+
+            if (_context.VrstaRada.Count() == 0)
+            {
+
+                foreach (var apex2 in vrste)
+                {
+                    VrstaRada v = new VrstaRada
+                    {
+
+                        Naziv = apex2.FIELD1
+                        
+
+                    };
+                    // _context.Zaposlenici.Add(z);
+                    _context.Entry(v).State = EntityState.Added;
+
+
+                }
+
+                _context.SaveChanges();
+
+            }
+            else
+            {
+                
+            }
+
+
+            //fill vrsta rada
+
+            string jsonnameVrsta = @"apexbaza/mjestorada.json";
+            var pathToFile3353535 = Path.Combine(_env.WebRootPath, jsonnameVrsta);
+
+
+            var testVrsta = System.IO.File.ReadAllText(pathToFile2);
+
+
+            var vrste = JsonConvert.DeserializeObject<List<ApexVrsta>>(testVrsta);
+
+
+
+            if (_context.VrstaRada.Count() == 0)
+            {
+
+                foreach (var apex2 in vrste)
+                {
+                    VrstaRada v = new VrstaRada
+                    {
+
+                        Naziv = apex2.FIELD1
+
+
+                    };
+                    // _context.Zaposlenici.Add(z);
+                    _context.Entry(v).State = EntityState.Added;
+
+
+                }
+
+                _context.SaveChanges();
+
+            }
+            else
+            {
+
+            }
+
+
+
+            /*if (_context.RadniNalozi.Count() == 0)
+            {
+                //test json-a
+                string jsonname = @"apexbaza/apexbaza.json";
+                var pathToFile = Path.Combine(_env.WebRootPath, jsonname);
+
+
+                var test2 = System.IO.File.ReadAllText(pathToFile);
+
+                var test = JsonConvert.DeserializeObject<List<ApexSer>>(test2);
+
+             
+
+
+             }
+
+            else {
+
+                return;
+            }*/
 
         }
 

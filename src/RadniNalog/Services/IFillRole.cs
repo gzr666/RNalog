@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RadniNalog.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,5 +12,6 @@ namespace RadniNalog.Services
     {
 
          Task createRolesandUsers();
+        void fillNalog();
     }
 }

@@ -133,7 +133,11 @@ namespace RadniNalog
             });
 
 
+
+            fillRole.fillNalog();
             fillRole.createRolesandUsers();
+
+         
 
 
         }
