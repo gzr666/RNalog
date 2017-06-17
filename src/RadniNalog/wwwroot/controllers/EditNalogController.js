@@ -166,7 +166,7 @@
 
                 toastr.success('Uspjesan Update Radnog Naloga', '',
                      {
-                         onHidden: function () { $state.go($state.home, {}, { reload: true }); }
+                         onHidden: function () { $state.go("home"); }
                      });
 
             }, function (error) {

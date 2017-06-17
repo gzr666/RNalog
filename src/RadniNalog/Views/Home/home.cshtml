@@ -32,7 +32,7 @@
                     <tr ng-repeat="user in data">
                        
                         <td data-title="'Datum'" sortable="'datum'" filter="{ 'datum': 'text' }">
-                            {{user.datum | date: 'dd/MM/yyyy' }}
+                            {{user.datum | date: 'dd-MM-yyyy' }}
                         </td>
                         <td data-title="'Rukovoditelj'" sortable="'rukovoditelj'" filter="{ 'rukovoditelj': 'text' }">
                             {{user.rukovoditelj | limitTo: 20 }}

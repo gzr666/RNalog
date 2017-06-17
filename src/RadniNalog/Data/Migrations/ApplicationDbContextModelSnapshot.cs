@@ -205,7 +205,7 @@ namespace RadniNalog.Data.Migrations
 
                     b.Property<int>("AutomobilID");
 
-                    b.Property<DateTime>("Datum");
+                    b.Property<string>("Datum");
 
                     b.Property<string>("Izvrsitelj2");
 

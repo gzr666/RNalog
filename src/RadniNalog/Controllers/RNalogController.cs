@@ -107,7 +107,7 @@ namespace RadniNalog.Controllers
             }
 
             //var nalog = await _context.RadniNalozi.SingleOrDefaultAsync(m => m.ID == id);
-            rNalog.Datum = DateTime.Now;
+            rNalog.Datum = DateTime.Now.ToShortDateString();
 
             _context.Entry(rNalog).State = EntityState.Modified;
 
@@ -134,12 +134,12 @@ namespace RadniNalog.Controllers
         [HttpPost]
         public async Task<IActionResult> PostRNalog([FromBody]  RNalog rNalog)
         {
-            string correctdate = rNalog.Datum.ToString();
+            //string correctdate = rNalog.Datum.ToString();
             //DateTime dt = Convert.ToDateTime(rNalog.Datum.ToString("MM/dd/yyyy"));
             //rNalog.Datum = dt;
 
            
-            rNalog.Datum = DateTime.Now;
+           // rNalog.Datum = DateTime.Now.ToShortDateString();
 
 
             if (!ModelState.IsValid)
@@ -173,7 +173,7 @@ namespace RadniNalog.Controllers
                 MjestoRada = rad,
                 VrstaRada = vrsta,
                 AutomobilID = rNalog.AutomobilID,
-                Datum = rNalog.Datum,
+                Datum = String.Format("{0:dd-MM-yyyy}", DateTime.Now),
                 Izvrsitelj2 = rNalog.Izvrsitelj2,
                 Izvrsitelj3 = rNalog.Izvrsitelj3,
                 Materijal = rNalog.Materijal,

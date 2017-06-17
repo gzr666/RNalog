@@ -2,7 +2,7 @@
 (function () {
 
     angular.module("myApp")
-    .controller("HomeController", function ($scope, $rootScope, $http, $filter, ngTableParams, toastr,$state, $stateParams,_,$timeout) {
+    .controller("HomeController", function ($scope, $rootScope, $http, $filter, ngTableParams, toastr,$state, $stateParams,_,$timeout,moment) {
         
 
       
@@ -159,6 +159,20 @@
 
         }
 
+
+        function stringToDate(_date, _format, _delimiter) {
+            var formatLowerCase = _format.toLowerCase();
+            var formatItems = formatLowerCase.split(_delimiter);
+            var dateItems = _date.split(_delimiter);
+            var monthIndex = formatItems.indexOf("mm");
+            var dayIndex = formatItems.indexOf("dd");
+            var yearIndex = formatItems.indexOf("yyyy");
+            var month = parseInt(dateItems[monthIndex]);
+            month -= 1;
+            var formatedDate = new Date(dateItems[yearIndex], month, dateItems[dayIndex]);
+            return formatedDate;
+        }
+
        
 
         
@@ -197,7 +211,7 @@
 
             };
 
-            $http.post("/api/RNalog", rnalog).then(function (data) {
+            $http.post("/api/RNalog/", rnalog).then(function (data) {
 
                 toastr.success('Uspjesno kreiran Radni Nalog', '',
                      {
@@ -226,7 +240,9 @@
 
                 return {
                     id:num.id,
-                    datum: num.datum,
+                    //datum: num.datum,
+                    datum:stringToDate(num.datum,"dd-mm-yyyy","-"),
+                 
                     rukovoditelj: num.rukovoditelj,
                     izvrsitelj2: num.izvrsitelj2,
                     izvrsitelj3: num.izvrsitelj3,

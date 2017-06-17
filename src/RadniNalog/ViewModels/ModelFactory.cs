@@ -53,7 +53,8 @@ namespace RadniNalog.ViewModels
                 {
                     ID = m.ID,
                     Automobil = ModelFactory.GetAutomobilVM(m.Automobil),
-                    Datum = m.Datum.ToString("dd-MM-yyyy"),
+                    //Datum = m.Datum.ToString("dd-MM-yyyy"),
+                    Datum = m.Datum,
                     Izvrsitelj2 = m.Izvrsitelj2,
                     Izvrsitelj3 = m.Izvrsitelj3,
                     Materijal = m.Materijal,

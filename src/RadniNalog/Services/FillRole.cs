@@ -7,6 +7,7 @@ using RadniNalog.Data;
 using RadniNalog.Models;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -33,32 +34,32 @@ namespace RadniNalog.Services
 
         }
 
-        public async void fillNalog()
+        public  void fillNalog()
         {
 
             //fill zaposlenika
 
 
-            string jsonname = @"apexbaza/zaposlenici.json";
-            var pathToFile = Path.Combine(_env.WebRootPath, jsonname);
+            string jsonZaposlenici = @"apexbaza/zaposlenici.json";
+            var pathToFile = Path.Combine(_env.WebRootPath, jsonZaposlenici);
 
 
-            var test2 = System.IO.File.ReadAllText(pathToFile);
+            var parseZaposlenici = System.IO.File.ReadAllText(pathToFile);
         
 
-            var test = JsonConvert.DeserializeObject<List<ApexZaposlenik>>(test2);
+            var deserZaposlenici = JsonConvert.DeserializeObject<List<ApexZaposlenik>>(parseZaposlenici);
 
            
 
             if (_context.Zaposlenici.Count() == 0)
             {
 
-                foreach (var apex in test)
+                foreach (var zaposlenik in deserZaposlenici)
                 {
                     Zaposlenik z = new Zaposlenik
                     {
 
-                        Ime = apex.FIELD1
+                        Ime = zaposlenik.FIELD1
 
                     };
                     // _context.Zaposlenici.Add(z);
@@ -77,26 +78,26 @@ namespace RadniNalog.Services
 
             //fill vrsta rada
 
-            string jsonnameVrsta = @"apexbaza/vrstarada.json";
-            var pathToFile2 = Path.Combine(_env.WebRootPath, jsonnameVrsta);
+            string jsonVrstaRada = @"apexbaza/vrstarada.json";
+            var pathToFile2 = Path.Combine(_env.WebRootPath, jsonVrstaRada);
 
 
-            var testVrsta = System.IO.File.ReadAllText(pathToFile2);
+            var parseVrstaRada = System.IO.File.ReadAllText(pathToFile2);
 
 
-            var vrste = JsonConvert.DeserializeObject<List<ApexVrsta>>(testVrsta);
+            var deserVrstaRada = JsonConvert.DeserializeObject<List<ApexVrsta>>(parseVrstaRada);
 
 
 
             if (_context.VrstaRada.Count() == 0)
             {
 
-                foreach (var apex2 in vrste)
+                foreach (var vrstaRada in deserVrstaRada)
                 {
                     VrstaRada v = new VrstaRada
                     {
 
-                        Naziv = apex2.FIELD1
+                        Naziv = vrstaRada.FIELD1
                         
 
                     };
@@ -115,33 +116,33 @@ namespace RadniNalog.Services
             }
 
 
-            //fill vrsta rada
+            //fill mjesta rada
 
-            string jsonnameVrsta = @"apexbaza/mjestorada.json";
-            var pathToFile3353535 = Path.Combine(_env.WebRootPath, jsonnameVrsta);
-
-
-            var testVrsta = System.IO.File.ReadAllText(pathToFile2);
+            string jsonMjestoRada = @"apexbaza/mjestorada.json";
+            var pathToMjestoRada = Path.Combine(_env.WebRootPath, jsonMjestoRada);
 
 
-            var vrste = JsonConvert.DeserializeObject<List<ApexVrsta>>(testVrsta);
+            var parseMjestoRada = System.IO.File.ReadAllText(pathToMjestoRada);
+
+
+            var deserMjestoRada = JsonConvert.DeserializeObject<List<ApexMjesto>>(parseMjestoRada);
 
 
 
-            if (_context.VrstaRada.Count() == 0)
+            if (_context.MjestoRada.Count() == 0)
             {
 
-                foreach (var apex2 in vrste)
+                foreach (var mjestoRada in deserMjestoRada)
                 {
-                    VrstaRada v = new VrstaRada
+                    MjestoRada m = new MjestoRada
                     {
 
-                        Naziv = apex2.FIELD1
+                        Ime = mjestoRada.FIELD1
 
 
                     };
                     // _context.Zaposlenici.Add(z);
-                    _context.Entry(v).State = EntityState.Added;
+                    _context.Entry(m).State = EntityState.Added;
 
 
                 }
@@ -153,6 +154,184 @@ namespace RadniNalog.Services
             {
 
             }
+
+
+            //fill registracije
+
+            string jsonRegistracija = @"apexbaza/registracija.json";
+            var pathToRegistracija = Path.Combine(_env.WebRootPath, jsonRegistracija);
+
+
+            var parseRegistracija = System.IO.File.ReadAllText(pathToRegistracija);
+
+
+            var deserRegistracija = JsonConvert.DeserializeObject<List<ApexRegistracija>>(parseRegistracija);
+
+
+
+            if (_context.Automobili.Count() == 0)
+            {
+
+                foreach (var registracija in deserRegistracija)
+                {
+                    Automobil a = new Automobil
+                    {
+
+                        Registracija = registracija.FIELD1
+
+
+                    };
+                    // _context.Zaposlenici.Add(z);
+                    _context.Entry(a).State = EntityState.Added;
+
+
+                }
+
+                _context.SaveChanges();
+
+            }
+            else
+            {
+
+            }
+
+            //fill nalozi
+
+
+            var autoID = 0;
+            var vrstaRadaID = 0;
+            var mjestoRadaID = 0;
+            string jsonRNalog = @"apexbaza/apexbaza.json";
+
+            var pathToRNalog = Path.Combine(_env.WebRootPath, jsonRNalog);
+
+            var parseRNalog = System.IO.File.ReadAllText(pathToRNalog);
+
+            var deserRNalog = JsonConvert.DeserializeObject<List<ApexSer>>(parseRNalog);
+
+
+            if (_context.RadniNalozi.Count() == 0)
+            {
+                Automobil defaultAuto = new Automobil
+                {
+
+                    Registracija = "Ostalo"
+
+
+                };
+
+                _context.Entry(defaultAuto).State = EntityState.Added;
+
+
+                VrstaRada defaultVrsta = new VrstaRada
+                {
+                    Naziv = "Ostalo"
+
+
+
+                };
+
+                _context.Entry(defaultVrsta).State = EntityState.Added;
+
+
+
+                MjestoRada defaultMjesto = new MjestoRada
+                {
+
+                    Ime = "Ostalo"
+
+                };
+
+                _context.Entry(defaultMjesto).State = EntityState.Added;
+
+
+                foreach (var rNalog in deserRNalog)
+
+              
+                {
+
+
+
+                   
+
+
+                    var auto = _context.Automobili.Where(automobil => automobil.Registracija == rNalog.FIELD11).FirstOrDefault();
+
+                    if (auto == null)
+                    {
+                        autoID = defaultAuto.ID;
+
+                    }
+                    else {
+
+                        autoID = auto.ID;
+                    }
+
+                    var vRad = _context.VrstaRada.Where(vRada => vRada.Naziv == rNalog.FIELD3).FirstOrDefault();
+
+                    if (vRad == null)
+                    {
+                        vrstaRadaID = defaultVrsta.ID;
+
+                    }
+                    else
+                    {
+
+                        vrstaRadaID = vRad.ID;
+                    }
+
+                    var mRad = _context.MjestoRada.Where(mRada => mRada.Ime == rNalog.FIELD2).FirstOrDefault();
+
+                    if (mRad == null)
+                    {
+                        mjestoRadaID = defaultMjesto.ID;
+
+                    }
+                    else
+                    {
+
+                        mjestoRadaID = mRad.ID;
+                    }
+
+
+
+
+                    RNalog nalog = new RNalog
+                    {
+
+                       OpisRadova = rNalog.FIELD4,
+                       Materijal = rNalog.FIELD5,
+                       Rukovoditelj = rNalog.FIELD7,
+                       Izvrsitelj2 = rNalog.FIELD8,
+                       Izvrsitelj3 = rNalog.FIELD9,
+                       PutniNalog = rNalog.FIELD10,
+                       AutomobilID = autoID,
+                       VrstaRadaID = vrstaRadaID,
+                       MjestoRadaID = mjestoRadaID,
+                       Datum = rNalog.FIELD6
+
+
+
+                    };
+                    // _context.Zaposlenici.Add(z);
+                    _context.Entry(nalog).State = EntityState.Added;
+
+
+                }
+
+                _context.SaveChanges();
+
+            }
+            else
+            {
+
+            }
+
+
+
+
+
+
 
 
 
