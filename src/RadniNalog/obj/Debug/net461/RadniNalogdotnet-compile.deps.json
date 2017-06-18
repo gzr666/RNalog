@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETFramework,Version=v4.6.1/",
-    "signature": "6eeb0eaf35cba53bcbfbbc74e9bc8e2d9441a819"
+    "signature": "fc7fa8f32e5e858e8c5166e93a7afac76c598f29"
   },
   "compilationOptions": {
     "defines": [
@@ -33,7 +33,7 @@
           "Microsoft.Extensions.Configuration.Json": "1.0.0",
           "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0-preview1-final",
-          "Microsoft.Extensions.Logging": "1.0.0",
+          "Microsoft.Extensions.Logging": "1.1.0",
           "Microsoft.Extensions.Logging.Console": "1.1.0",
           "Microsoft.Extensions.Logging.Debug": "1.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
@@ -253,7 +253,7 @@
           "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "1.0.0",
           "Microsoft.Extensions.FileProviders.Physical": "1.0.0",
-          "Microsoft.Extensions.Logging": "1.0.0",
+          "Microsoft.Extensions.Logging": "1.1.0",
           "Microsoft.Extensions.Options": "1.0.0",
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0",
           "System.Diagnostics.DiagnosticSource": "4.0.0",
@@ -708,7 +708,7 @@
         "dependencies": {
           "Microsoft.Extensions.Caching.Memory": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "1.0.0",
-          "Microsoft.Extensions.Logging": "1.0.0",
+          "Microsoft.Extensions.Logging": "1.1.0",
           "Remotion.Linq": "2.1.1",
           "System.Collections.Immutable": "1.2.0",
           "System.Interactive.Async": "3.0.0",
@@ -934,11 +934,11 @@
           "lib/netstandard1.0/Microsoft.Extensions.Localization.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Logging/1.0.0": {
+      "Microsoft.Extensions.Logging/1.1.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0-preview1-final",
           "Microsoft.Extensions.Logging.Abstractions": "1.1.0",
-          "System.Threading": "4.0.10.0"
+          "NETStandard.Library": "2.0.0-preview1-25301-01"
         },
         "compile": {
           "lib/netstandard1.1/Microsoft.Extensions.Logging.dll": {}
@@ -1552,7 +1552,7 @@
           "Microsoft.Extensions.Configuration.Json": "1.0.0",
           "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0-preview1-final",
-          "Microsoft.Extensions.Logging": "1.0.0",
+          "Microsoft.Extensions.Logging": "1.1.0",
           "Microsoft.Extensions.Logging.Console": "1.1.0",
           "Microsoft.Extensions.Logging.Debug": "1.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
@@ -1772,7 +1772,7 @@
           "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "1.0.0",
           "Microsoft.Extensions.FileProviders.Physical": "1.0.0",
-          "Microsoft.Extensions.Logging": "1.0.0",
+          "Microsoft.Extensions.Logging": "1.1.0",
           "Microsoft.Extensions.Options": "1.0.0",
           "Microsoft.Extensions.PlatformAbstractions": "1.0.0",
           "System.Diagnostics.DiagnosticSource": "4.0.0",
@@ -2223,7 +2223,7 @@
         "dependencies": {
           "Microsoft.Extensions.Caching.Memory": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "1.0.0",
-          "Microsoft.Extensions.Logging": "1.0.0",
+          "Microsoft.Extensions.Logging": "1.1.0",
           "Remotion.Linq": "2.1.1",
           "System.Collections.Immutable": "1.2.0",
           "System.Interactive.Async": "3.0.0",
@@ -2449,11 +2449,11 @@
           "lib/netstandard1.0/Microsoft.Extensions.Localization.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Logging/1.0.0": {
+      "Microsoft.Extensions.Logging/1.1.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0-preview1-final",
           "Microsoft.Extensions.Logging.Abstractions": "1.1.0",
-          "System.Threading": "4.0.10.0"
+          "NETStandard.Library": "2.0.0-preview1-25301-01"
         },
         "runtime": {
           "lib/netstandard1.1/Microsoft.Extensions.Logging.dll": {}
@@ -3305,10 +3305,10 @@
       "serviceable": true,
       "sha512": "sha512-hQ2sEJf7swsD5jk4DogLI3DazGvsvbz0IuSbxPFDjcvP0PRdxgCsyGpg70LD+3tRmxZcE1uh5jtcAi4X2BcB9w=="
     },
-    "Microsoft.Extensions.Logging/1.0.0": {
+    "Microsoft.Extensions.Logging/1.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-0mDuASVrd/nMeBYIJSK+9lT3TSmWxUXP/ipVB1pF1ApMN5fqGCckPTNwmOfT4Z9wPkXGnhbwFTGrxZvbzTWxOg=="
+      "sha512": "sha512-IbNogJJE3NRtc5/DAtKEkhXaUQK9N7I6A5G2+ZfyBzWMvAgLKSimESpNMp+gnzUYsW3YbHkeT8jLk9m/3vGY5A=="
     },
     "Microsoft.Extensions.Logging.Abstractions/1.1.0": {
       "type": "package",
