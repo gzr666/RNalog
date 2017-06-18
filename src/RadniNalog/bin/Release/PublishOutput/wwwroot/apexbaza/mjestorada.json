@@ -1,0 +1,399 @@
+[
+ 
+ {
+   "FIELD1": "DURN Bile laze"
+ },
+ {
+   "FIELD1": "DURN Bisko 2"
+ },
+ {
+   "FIELD1": "DURN Bitelić"
+ },
+ {
+   "FIELD1": "DURN Blato"
+ },
+ {
+   "FIELD1": "DURN Borovci"
+ },
+ {
+   "FIELD1": "DURN Drvenik"
+ },
+ {
+   "FIELD1": "DURN Gizdavac"
+ },
+ {
+   "FIELD1": "DURN Kotlenice"
+ },
+ {
+   "FIELD1": "DURN Kočinje brdo"
+ },
+ {
+   "FIELD1": "DURN Nova sela"
+ },
+ {
+   "FIELD1": "DURN Pitve"
+ },
+ {
+   "FIELD1": "DURN Prpuša ???"
+ },
+ {
+   "FIELD1": "DURN Rudine"
+ },
+ {
+   "FIELD1": "DURN Srijane 2"
+ },
+ {
+   "FIELD1": "DURN Tešije 1"
+ },
+ {
+   "FIELD1": "DURN Ubline"
+ },
+ {
+   "FIELD1": "DURN Vrba"
+ },
+ {
+   "FIELD1": "DURN Vrboska"
+ },
+ {
+   "FIELD1": "Digipitor Blato n/c"
+ },
+ {
+   "FIELD1": "Digipitor Korušca"
+ },
+ {
+   "FIELD1": "Digipitor Kočinje brdo"
+ },
+ {
+   "FIELD1": "Digipitor Labinštica"
+ },
+ {
+   "FIELD1": "Digipitor Radunić"
+ },
+ {
+   "FIELD1": "Lokacija Gundulićeva"
+ },
+ {
+   "FIELD1": "Lokacija Hercegovačka - skladište"
+ },
+ {
+   "FIELD1": "Lokacija Poljička"
+ },
+ {
+   "FIELD1": "Lokacija Put Supavla"
+ },
+ {
+   "FIELD1": "MTU Vrboran"
+ },
+ {
+   "FIELD1": "Pogon Brač"
+ },
+ {
+   "FIELD1": "Pogon Hvar"
+ },
+ {
+   "FIELD1": "Pogon Imotski"
+ },
+ {
+   "FIELD1": "Pogon Makarska"
+ },
+ {
+   "FIELD1": "Pogon Metković"
+ },
+ {
+   "FIELD1": "Pogon Omiš"
+ },
+ {
+   "FIELD1": "Pogon Ploče"
+ },
+ {
+   "FIELD1": "Pogon Sinj"
+ },
+ {
+   "FIELD1": "Pogon Trogir"
+ },
+ {
+   "FIELD1": "Pogon Vrgorac"
+ },
+ {
+   "FIELD1": "Pogonski ured Vis"
+ },
+ {
+   "FIELD1": "RR Vidova gora"
+ },
+ {
+   "FIELD1": "RS 10 kV Kraljevac"
+ },
+ {
+   "FIELD1": "RS 10 kV SUĆIDAR"
+ },
+ {
+   "FIELD1": "RS 35 kV VRBORAN"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV  Konjsko 2"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV  PČCP Šestanovac"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV COKP Sveti Ilija"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV COKP Zagvozd"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV CS Šestanovac"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV Cista provo 1"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV Cista velika 1"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV GP Metković"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV Gornji humac"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV Kaštel Sućurac 5"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV Kobiljača 1"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV Kobiljača 2"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV Konjsko 2"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV Korušca 2"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV Lećevica 1"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV Mali Prolog 1"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV Mali Prolog 2"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV PUO Biokovo"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV PUO Dusina"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV PUO Kotlenice"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV PUO Mosor"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV PUO Pojezerje"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV PUO Zagvozd"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV PUO Župa"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV Srijane 1 Radovići"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV Srinjine"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV Sveti Ilija 1"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV Sveti Ilija 2"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV Sveti Ilija 3"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV Sveti Ilija 4"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV U. T. Konjšćica"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV U. T. Rošca"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV U.T. Vrankovića ograda"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV Zaranač"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV tunel Bisko"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV tunel Crna brda"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV tunel Puljani"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV tunel Staržina"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV tunel Umac"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV tunel Šubir 1"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV tunel Šubir 2"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV ČCP Karamatići"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV ČCP Čarapine"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV Čvor Ravča"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV Čvor Zagvozd 1"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV Čvor Zagvozd 2"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV Čvor Šestanovac"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV čvor Akrapi"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV čvor Baška Voda"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV čvor Bisko"
+ },
+ {
+   "FIELD1": "TS 10/0.4 kV čvor Vrgorac"
+ },
+ {
+   "FIELD1": "TS 110/10 kV DUGOPOLJE"
+ },
+ {
+   "FIELD1": "TS 110/10 kV Imotski"
+ },
+ {
+   "FIELD1": "TS 110/10 kV VISOKA "
+ },
+ {
+   "FIELD1": "TS 110/10(20) kV DOBRI"
+ },
+ {
+   "FIELD1": "TS 110/10(20) kV VRGORAC"
+ },
+ {
+   "FIELD1": "TS 110/10(20) kV ZAGVOZD"
+ },
+ {
+   "FIELD1": "TS 110/35 kV Kaštela"
+ },
+ {
+   "FIELD1": "TS 110/35 kV NEREŽIŠĆE "
+ },
+ {
+   "FIELD1": "TS 110/35/10 kV DUGI RAT"
+ },
+ {
+   "FIELD1": "TS 30/10 kV OMIŠ (LISIČINE)"
+ },
+ {
+   "FIELD1": "TS 35/10 kV BAŠKA VODA"
+ },
+ {
+   "FIELD1": "TS 35/10 kV BOL"
+ },
+ {
+   "FIELD1": "TS 35/10 kV BRIŽINE"
+ },
+ {
+   "FIELD1": "TS 35/10 kV BRODOGRADILIŠTE"
+ },
+ {
+   "FIELD1": "TS 35/10 kV DUJMOVAČA"
+ },
+ {
+   "FIELD1": "TS 35/10 kV Divulje"
+ },
+ {
+   "FIELD1": "TS 35/10 kV GRIPE"
+ },
+ {
+   "FIELD1": "TS 35/10 kV GROHOTE"
+ },
+ {
+   "FIELD1": "TS 35/10 kV HVAR"
+ },
+ {
+   "FIELD1": "TS 35/10 kV IMOTSKI (KONJEVODE)"
+ },
+ {
+   "FIELD1": "TS 35/10 kV KAŠTELA"
+ },
+ {
+   "FIELD1": "TS 35/10 kV KLIS"
+ },
+ {
+   "FIELD1": "TS 35/10 kV MARINA"
+ },
+ {
+   "FIELD1": "TS 35/10 kV MEDOV DOLAC"
+ },
+ {
+   "FIELD1": "TS 35/10 kV METKOVIĆ 1"
+ },
+ {
+   "FIELD1": "TS 35/10 kV METKOVIĆ 2"
+ },
+ {
+   "FIELD1": "TS 35/10 kV MILJEVAC"
+ },
+ {
+   "FIELD1": "TS 35/10 kV MILNA"
+ },
+ {
+   "FIELD1": "TS 35/10 kV MUĆ"
+ },
+ {
+   "FIELD1": "TS 35/10 kV PODGORA"
+ },
+ {
+   "FIELD1": "TS 35/10 kV PRANČEVIĆI"
+ },
+ {
+   "FIELD1": "TS 35/10 kV PUČIŠĆA"
+ },
+ {
+   "FIELD1": "TS 35/10 kV RAVNICE"
+ },
+ {
+   "FIELD1": "TS 35/10 kV SINJ1"
+ },
+ {
+   "FIELD1": "TS 35/10 kV SINJ2"
+ },
+ {
+   "FIELD1": "TS 35/10 kV TRILJ"
+ },
+ {
+   "FIELD1": "TS 35/10 kV VIS"
+ },
+ {
+   "FIELD1": "TS 35/10 kV VRLIKA"
+ }
+]

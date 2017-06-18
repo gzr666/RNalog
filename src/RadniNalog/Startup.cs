@@ -16,6 +16,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Http;
 using RazorPDFCore;
 
+
 namespace RadniNalog
 {
     public class Startup
@@ -51,9 +52,15 @@ namespace RadniNalog
             services.AddApplicationInsightsTelemetry(Configuration);
 
 
-            /*Dodavanje servisa za interakciju s bazom u INJECT KONTAINER*/
+            /*Dodavanje servisa za interakciju s  MSSQLbazom u INJECT KONTAINER*/
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+
+            //services.AddDbContext<ApplicationDbContext>(options =>
+            //   options.UseMySQL(Configuration.GetConnectionString("DefaultConnection")));
+
+
 
 
             /*Servis koji obavlja sve vezano uz autentifikaciju i autorizaciju.

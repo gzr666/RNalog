@@ -102,7 +102,7 @@
 --reference:C:\Users\geezer666\.nuget\packages\Microsoft.Extensions.Configuration.Json\1.0.0\lib\net451\Microsoft.Extensions.Configuration.Json.dll
 --reference:C:\Users\geezer666\.nuget\packages\Microsoft.Extensions.Configuration.UserSecrets\1.0.0\lib\net451\Microsoft.Extensions.Configuration.UserSecrets.dll
 --reference:C:\Users\geezer666\.nuget\packages\Microsoft.Extensions.DependencyInjection\1.0.0\lib\netstandard1.1\Microsoft.Extensions.DependencyInjection.dll
---reference:C:\Users\geezer666\.nuget\packages\Microsoft.Extensions.DependencyInjection.Abstractions\1.1.0\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+--reference:C:\Users\geezer666\.nuget\packages\Microsoft.Extensions.DependencyInjection.Abstractions\2.0.0-preview1-final\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 --reference:C:\Users\geezer666\.nuget\packages\Microsoft.Extensions.DependencyModel\1.0.0\lib\net451\Microsoft.Extensions.DependencyModel.dll
 --reference:C:\Users\geezer666\.nuget\packages\Microsoft.Extensions.DiagnosticAdapter\1.0.0\lib\netstandard1.1\Microsoft.Extensions.DiagnosticAdapter.dll
 --reference:C:\Users\geezer666\.nuget\packages\Microsoft.Extensions.FileProviders.Abstractions\1.1.0\lib\netstandard1.0\Microsoft.Extensions.FileProviders.Abstractions.dll
@@ -131,7 +131,6 @@
 --reference:C:\Users\geezer666\.nuget\packages\Microsoft.VisualStudio.Web.CodeGeneration.Tools\1.0.0-preview2-final\lib\net451\dotnet-aspnet-codegenerator.exe
 --reference:C:\Users\geezer666\.nuget\packages\Microsoft.VisualStudio.Web.CodeGeneration.Utils\1.0.0-preview2-final\lib\net451\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 --reference:C:\Users\geezer666\.nuget\packages\Microsoft.VisualStudio.Web.CodeGenerators.Mvc\1.0.0-preview2-final\lib\net451\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
---reference:C:\Users\geezer666\.nuget\packages\Microsoft.Win32.Primitives\4.3.0\ref\net46\Microsoft.Win32.Primitives.dll
 --reference:C:\Users\geezer666\.nuget\packages\Newtonsoft.Json\10.0.1\lib\net45\Newtonsoft.Json.dll
 --reference:C:\Users\geezer666\.nuget\packages\NuGet.Common\3.5.0-beta2-1484\lib\net45\NuGet.Common.dll
 --reference:C:\Users\geezer666\.nuget\packages\NuGet.Configuration\3.5.0-beta2-1484\lib\net45\NuGet.Configuration.dll
@@ -149,7 +148,7 @@
 --reference:C:\Users\geezer666\.nuget\packages\NuGet.Versioning\3.5.0-beta2-1484\lib\net45\NuGet.Versioning.dll
 --reference:C:\Users\geezer666\.nuget\packages\RazorPDFCore\1.0.3\lib\net461\RazorPDFCore.dll
 --reference:C:\Users\geezer666\.nuget\packages\Remotion.Linq\2.1.1\lib\net45\Remotion.Linq.dll
---reference:C:\Users\geezer666\.nuget\packages\System.AppContext\4.3.0\ref\net46\System.AppContext.dll
+--reference:C:\Users\geezer666\.nuget\packages\System.AppContext\4.1.0\ref\net46\System.AppContext.dll
 --reference:C:\Users\geezer666\.nuget\packages\System.Buffers\4.0.0\lib\netstandard1.1\System.Buffers.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Collections.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Collections.Concurrent.dll
@@ -157,25 +156,20 @@
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ComponentModel.dll
 --reference:C:\Users\geezer666\.nuget\packages\System.ComponentModel.Primitives\4.1.0\ref\net45\System.ComponentModel.Primitives.dll
 --reference:C:\Users\geezer666\.nuget\packages\System.ComponentModel.TypeConverter\4.1.0\ref\net45\System.ComponentModel.TypeConverter.dll
---reference:C:\Users\geezer666\.nuget\packages\System.Console\4.3.0\ref\net46\System.Console.dll
+--reference:C:\Users\geezer666\.nuget\packages\System.Console\4.0.0\ref\net46\System.Console.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Contracts.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Debug.dll
---reference:C:\Users\geezer666\.nuget\packages\System.Diagnostics.DiagnosticSource\4.3.0\lib\net46\System.Diagnostics.DiagnosticSource.dll
+--reference:C:\Users\geezer666\.nuget\packages\System.Diagnostics.DiagnosticSource\4.0.0\lib\net46\System.Diagnostics.DiagnosticSource.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Tools.dll
---reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Tracing.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Dynamic.Runtime.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Globalization.dll
---reference:C:\Users\geezer666\.nuget\packages\System.Globalization.Calendars\4.3.0\ref\net46\System.Globalization.Calendars.dll
 --reference:C:\Users\geezer666\.nuget\packages\System.Interactive.Async\3.0.0\lib\net45\System.Interactive.Async.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.IO.dll
---reference:C:\Users\geezer666\.nuget\packages\System.IO.Compression.ZipFile\4.3.0\ref\net46\System.IO.Compression.ZipFile.dll
---reference:C:\Users\geezer666\.nuget\packages\System.IO.FileSystem\4.3.0\ref\net46\System.IO.FileSystem.dll
---reference:C:\Users\geezer666\.nuget\packages\System.IO.FileSystem.Primitives\4.3.0\ref\net46\System.IO.FileSystem.Primitives.dll
+--reference:C:\Users\geezer666\.nuget\packages\System.IO.FileSystem\4.0.1\ref\net46\System.IO.FileSystem.dll
+--reference:C:\Users\geezer666\.nuget\packages\System.IO.FileSystem.Primitives\4.0.1\ref\net46\System.IO.FileSystem.Primitives.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Linq.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Linq.Expressions.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Linq.Queryable.dll
---reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Net.Primitives.dll
---reference:C:\Users\geezer666\.nuget\packages\System.Net.Sockets\4.3.0\ref\net46\System.Net.Sockets.dll
 --reference:C:\Users\geezer666\.nuget\packages\System.Numerics.Vectors\4.1.1\ref\net46\System.Numerics.Vectors.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ObjectModel.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.dll
@@ -190,23 +184,21 @@
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Extensions.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Handles.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.InteropServices.dll
---reference:C:\Users\geezer666\.nuget\packages\System.Runtime.InteropServices.RuntimeInformation\4.3.0\ref\netstandard1.1\System.Runtime.InteropServices.RuntimeInformation.dll
+--reference:C:\Users\geezer666\.nuget\packages\System.Runtime.InteropServices.RuntimeInformation\4.0.0\ref\netstandard1.1\System.Runtime.InteropServices.RuntimeInformation.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Numerics.dll
 --reference:C:\Users\geezer666\.nuget\packages\System.Runtime.Serialization.Primitives\4.1.1\ref\net46\System.Runtime.Serialization.Primitives.dll
---reference:C:\Users\geezer666\.nuget\packages\System.Security.Cryptography.Algorithms\4.3.0\ref\net461\System.Security.Cryptography.Algorithms.dll
---reference:C:\Users\geezer666\.nuget\packages\System.Security.Cryptography.Encoding\4.3.0\ref\net46\System.Security.Cryptography.Encoding.dll
---reference:C:\Users\geezer666\.nuget\packages\System.Security.Cryptography.Primitives\4.3.0\ref\net46\System.Security.Cryptography.Primitives.dll
---reference:C:\Users\geezer666\.nuget\packages\System.Security.Cryptography.X509Certificates\4.3.0\ref\net461\System.Security.Cryptography.X509Certificates.dll
+--reference:C:\Users\geezer666\.nuget\packages\System.Security.Cryptography.Algorithms\4.2.0\ref\net461\System.Security.Cryptography.Algorithms.dll
+--reference:C:\Users\geezer666\.nuget\packages\System.Security.Cryptography.Encoding\4.0.0\ref\net46\System.Security.Cryptography.Encoding.dll
+--reference:C:\Users\geezer666\.nuget\packages\System.Security.Cryptography.Primitives\4.0.0\ref\net46\System.Security.Cryptography.Primitives.dll
+--reference:C:\Users\geezer666\.nuget\packages\System.Security.Cryptography.X509Certificates\4.1.0\ref\net461\System.Security.Cryptography.X509Certificates.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Text.Encoding.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Text.Encoding.Extensions.dll
 --reference:C:\Users\geezer666\.nuget\packages\System.Text.Encodings.Web\4.3.0\lib\netstandard1.0\System.Text.Encodings.Web.dll
---reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Text.RegularExpressions.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.Tasks.dll
 --reference:C:\Users\geezer666\.nuget\packages\System.Threading.Tasks.Extensions\4.0.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.Tasks.Parallel.dll
---reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.Timer.dll
---reference:C:\Users\geezer666\.nuget\packages\System.Xml.ReaderWriter\4.3.0\ref\net46\System.Xml.ReaderWriter.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Xml.ReaderWriter.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Xml.XDocument.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\mscorlib.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll
@@ -223,7 +215,6 @@
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.IdentityModel.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Net.Http.WebRequest.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.ServiceModel.dll
---reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.IO.Compression.FileSystem.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Numerics.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Runtime.Serialization.dll
 --resource:"C:\Users\geezer666\Documents\Visual Studio 2015\Projects\RNalog\src\RadniNalog\obj\Debug\net461\RadniNalogdotnet-compile.deps.json",RadniNalog.deps.json

@@ -6,7 +6,7 @@
 
 
         $scope.options = {
-            title: { display: true, text: 'Legend', position: 'bottom', padding: 5 },
+            title: { display: true, text: 'Test', position: 'bottom', padding: 5 },
             legend: { display: true, position: "bottom" }
         };
 
@@ -19,7 +19,7 @@
         $scope.data = [300, 500, 100, 400, 1000, 800, 56, 888];
 
 
-        $scope.labels2 = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+        $scope.labels2 = ['2034', '2007', '2008', '2009', '2010', '2011', '2012'];
         $scope.series2 = ['Series A', 'Series B'];
 
         $scope.data2 = [
